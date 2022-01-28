@@ -3377,7 +3377,8 @@ input.little-input {
     color: #686868;
 }
 
-.information-accordion {
+.information-accordion,
+.accordion-info-body {
     margin-top: 40px;
     margin-bottom: 80px;
     border: 1px solid #F1F1F1;
@@ -3395,11 +3396,13 @@ input.little-input {
     cursor: pointer;
 }
 
-.information-accordion-body {
+.information-accordion-body,
+.accordion-info-body {
     padding: 30px 22px 30px 22px;
 }
 
-.information-accordion-collapse {
+.information-accordion-collapse,
+.accordion-info-collapse {
     /*visibility: hidden;
     opacity: 0;*/
     display: none;
@@ -3411,7 +3414,8 @@ input.little-input {
     border-top: 1px solid #F1F1F1;
 }
 
-.information-accordion-item.active .information-accordion-collapse {
+.information-accordion-item.active .information-accordion-collapse,
+.accordion-info-item.active .accordion-info-collapse {
     visibility: visible;
     opacity: 1;
     height: 100%;
@@ -3561,6 +3565,111 @@ input.little-input {
 .information-doc-link a span {
     color: #686868;
     text-decoration: underline;
+}
+
+.information-list-title {
+    font: normal 500 18px/25px Futura PT;
+    color: #007B4B;
+}
+
+.information-list ul li {
+    font: normal 400 18px/25px Futura PT;
+    color: #686868;
+    position: relative;
+}
+
+.information-list ul {
+    padding-left: 20px;
+}
+
+.information-doc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.information-doc:last-child {
+    margin-bottom: 0;
+}
+
+.information-doc-icon {
+    margin-right: 13px;
+}
+
+.information-doc-link a {
+    font: normal normal 18px/25px Futura PT;
+    text-decoration-line: underline;
+    color: #007B4B;
+}
+
+.information-doc-link a span {
+    color: #686868;
+    text-decoration: underline;
+}
+
+.accordion-info-title,
+.accordion-info-title-left {
+    display: flex;
+    align-items: center;
+}
+
+.accordion-info-title {
+    justify-content: space-between;
+    padding: 22px;
+    border: 1px solid #F1F1F1;
+    cursor: pointer;
+}
+
+.accordion-info-title-left img {
+    margin-right: 14px;
+}
+
+.accordion-info-title-left {
+    font: normal normal 18px/23px Futura PT;
+    color: #007B4B;
+    width: 95%;
+}
+
+.accordion-info {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.accordion-info-body {
+    margin: 0;
+}
+
+.table_rad .first-table-accordion tr:first-child td {
+    padding-top: 14px;
+}
+
+.accordion-info-body .table_rad {
+    margin-bottom: 0;
+}
+
+.smart-table-tooltip-icon {
+    vertical-align: super;
+}
+
+.smart-table-tooltip-icon::after {
+    content: attr(tooltip);
+    background: rgba(107, 106, 106, 0.85);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
+    padding: 17px 22px 14px 14px;
+    font: normal normal 18px/25px Futura PT;
+    color: #FFFFFF;
+}
+
+.table__tabs--info li {
+    position: relative;
+}
+
+.smart-table-tooltip-tooltip-desc {
+    background: rgba(107, 106, 106, 0.85);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
+    padding: 17px 22px 14px 14px;
+    font: normal normal 18px/25px Futura PT;
+    color: #FFFFFF;
 }
 
 
@@ -4033,6 +4142,17 @@ ol li ol {
     padding: 30px 25px;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table__tabs--info p {
+    width: 90%;
+}
+
+.smart_table--tr.smart_tr--active .smart_td--first .smart-table-arrow {
+    display: none;
 }
 
 .smart_table--td {
@@ -4129,24 +4249,21 @@ ol li ol {
     height: 100%;
 }
 
-
 .smart_td--first .smart_table--main {
     height: auto;
-
+}
 
 
 /*----------*/
-.text-title{
+
+.text-title {
     font-family: "Futura PT";
-font-style: normal;
-font-weight: normal;
-font-size: 22px;
-line-height: 25px;
-/* identical to box height, or 114% */
-
-
-/* 05 enpf */
-margin-bottom: 14px;
-color: #2D2D2D !important;
-
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+    /* identical to box height, or 114% */
+    /* 05 enpf */
+    margin-bottom: 14px;
+    color: #2D2D2D !important;
 }
