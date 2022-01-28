@@ -4025,3 +4025,19 @@ ol li ol {
     height: auto;
 }
 
+
+
+/*----------*/
+.text-title{
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 25px;
+/* identical to box height, or 114% */
+
+
+/* 05 enpf */
+margin-bottom: 14px;
+color: #2D2D2D;
+}
