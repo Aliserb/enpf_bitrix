@@ -4129,10 +4129,10 @@ ol li ol {
     height: 100%;
 }
 
-<<<<<<< HEAD
+
 .smart_td--first .smart_table--main {
     height: auto;
-=======
+
 
 
 /*----------*/
@@ -4147,6 +4147,6 @@ line-height: 25px;
 
 /* 05 enpf */
 margin-bottom: 14px;
-color: #2D2D2D;
->>>>>>> 401b8fbcde806a0263929bd5db6d543e600dd5cf
+color: #2D2D2D !important;
+
 }
