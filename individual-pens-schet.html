@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЕНПФ</title>
+    <!-- библиотеки -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- библиотеки -->
+
+    <!-- подключение шрифтов -->
+    <link href="assets/fonts/MuseoSansCyrl-700/style.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/fonts/montserrat/stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/fonts/FuturaPT/stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/fonts/proxima/stylesheet.css" rel="stylesheet" type="text/css"/>
+    <!-- подключение шрифтов -->
+    
+    <!-- Подключение своих стилей -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <!-- Подключение своих стилей -->
+</head>
+<body>
+    <header class="header">
+        <!-- начало верхней шапки -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-row">
+                    <!-- логотип -->
+                    <div class="logo">
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- логотип -->
+
+                    <div class="header-right">
+                        <!-- контакты в шапке -->
+                        <div class="header-contact">
+                            <a href="tel:1418">
+                                1418
+                            </a>
+
+                            <p>
+                                Звонок по Казахстану бесплатный<br>
+                                Будние дни с 9:00 до 18:00
+                            </p>
+                        </div>
+                        <!-- контакты в шапке -->
+
+                        <!-- видеоконсультант -->
+                        <div class="header-video-consul">
+                            <a href="#">
+                                Видеоконсультант
+                            </a>
+
+                            <img src="assets/images/icons/video-consul.png" alt="camera">
+                        </div>
+                        <!-- видеоконсультант -->
+
+                        <!-- кнопка личный кабинет -->
+
+                        <div class="header-account">
+                            <div class="header-account-title">
+                                Личный кабинет
+                            </div>
+
+                            <div class="header-account-buttons">
+                                <div class="header-button-item active">
+                                    <a href="#">
+                                        физические лица
+                                    </a>
+                                </div>
+
+                                <div class="header-button-item">
+                                    <a href="#">
+                                        юридические лица
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- кнопка личный кабинет -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- конец верхней шапки -->
+
+        <!-- начало средней шапки -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="header-row">
+                    <nav class="header-middle-menu">
+                        <ul class="menu">
+                            <li class="active">
+                                <a href="index.html">
+                                    Наши услуги
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="information.html">
+                                    Информация
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html">
+                                    Связаться с нами
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    ВОПРОСЫ-ОТВЕТЫ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-middle-right">
+                        <div class="header-middle-item">
+                            <div class="header-search">
+                                <form class="d-flex header-search-form" role="search">
+                                    <input class="search" id="search" type="text" placeholder="Поиск" aria-label="Search">
+                                    <button class="search-button" type="submit">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6781 13.9271C16.8884 12.2755 17.4305 10.2278 17.1959 8.19373C16.9613 6.15963 15.9673 4.28911 14.4128 2.9564C12.8583 1.62369 10.8579 0.927069 8.81187 1.00591C6.76581 1.08475 4.82496 1.93323 3.37762 3.38161C1.93028 4.82998 1.08318 6.77144 1.00581 8.81756C0.928434 10.8637 1.62649 12.8636 2.96031 14.4171C4.29413 15.9707 6.16536 16.9633 8.19963 17.1964C10.2339 17.4296 12.2812 16.886 13.9319 15.6745H13.9306C13.9681 15.7245 14.0081 15.772 14.0531 15.8183L18.8654 20.6306C19.0998 20.8651 19.4178 20.9969 19.7493 20.9971C20.0809 20.9972 20.399 20.8656 20.6335 20.6312C20.8681 20.3968 20.9999 20.0789 21 19.7473C21.0001 19.4157 20.8685 19.0977 20.6341 18.8631L15.8218 14.0508C15.7771 14.0056 15.7291 13.9638 15.6781 13.9258V13.9271ZM16.0006 9.12226C16.0006 10.0251 15.8227 10.919 15.4773 11.7531C15.1318 12.5872 14.6254 13.3451 13.987 13.9834C13.3486 14.6218 12.5907 15.1282 11.7567 15.4737C10.9226 15.8192 10.0286 15.997 9.12582 15.997C8.22301 15.997 7.32905 15.8192 6.49497 15.4737C5.66089 15.1282 4.90302 14.6218 4.26464 13.9834C3.62626 13.3451 3.11987 12.5872 2.77438 11.7531C2.4289 10.919 2.25108 10.0251 2.25108 9.12226C2.25108 7.29896 2.97538 5.55034 4.26464 4.26108C5.5539 2.97182 7.30252 2.24752 9.12582 2.24752C10.9491 2.24752 12.6977 2.97182 13.987 4.26108C15.2763 5.55034 16.0006 7.29896 16.0006 9.12226Z" fill="#007B4B"/>
+                                        </svg>
+                                    </button>
+                                 </form>
+                            </div>
+                        </div>
+                        
+                        <div class="header-middle-item">
+                            <div class="header-visually">
+                                <p>
+                                    Версия для слабовидящих 
+                                </p>
+
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.9048 4.40002C7.58901 4.40002 7.27692 4.46801 6.98974 4.59935C6.70256 4.7307 6.44702 4.92233 6.2405 5.16122L2.5984 9.37532C2.341 9.67417 2.19967 10.0556 2.2002 10.45V13.75C2.2002 14.4794 2.48993 15.1788 3.00565 15.6946C3.52138 16.2103 4.22085 16.5 4.9502 16.5H7.1502C7.87954 16.5 8.57901 16.2103 9.09474 15.6946C9.61047 15.1788 9.9002 14.4794 9.9002 13.75V12.1H12.1002V13.75C12.1002 14.4794 12.3899 15.1788 12.9057 15.6946C13.4214 16.2103 14.1208 16.5 14.8502 16.5H17.0502C17.7795 16.5 18.479 16.2103 18.9947 15.6946C19.5105 15.1788 19.8002 14.4794 19.8002 13.75V10.45C19.8002 9.97812 19.6022 9.55352 19.2854 9.25322L15.7599 5.16342C15.5535 4.92399 15.2978 4.73186 15.0104 4.60012C14.723 4.46839 14.4106 4.40014 14.0945 4.40002H13.2002C13.0543 4.40002 12.9144 4.45797 12.8113 4.56112C12.7081 4.66426 12.6502 4.80416 12.6502 4.95002C12.6502 5.09589 12.7081 5.23579 12.8113 5.33893C12.9144 5.44208 13.0543 5.50002 13.2002 5.50002H14.0945C14.2526 5.50008 14.4088 5.53421 14.5525 5.60007C14.6962 5.66594 14.824 5.76201 14.9272 5.88172L17.4429 8.80002H13.7502C13.3126 8.80002 12.8929 8.97386 12.5835 9.2833C12.274 9.59273 12.1002 10.0124 12.1002 10.45V11H9.9002V10.45C9.9002 10.0124 9.72636 9.59273 9.41692 9.2833C9.10749 8.97386 8.6878 8.80002 8.2502 8.80002H4.5487L7.0732 5.88062C7.1764 5.76125 7.30408 5.66547 7.44757 5.5998C7.59106 5.53413 7.74699 5.5001 7.9048 5.50002H8.8002C8.94607 5.50002 9.08596 5.44208 9.18911 5.33893C9.29225 5.23579 9.3502 5.09589 9.3502 4.95002C9.3502 4.80416 9.29225 4.66426 9.18911 4.56112C9.08596 4.45797 8.94607 4.40002 8.8002 4.40002H7.9048ZM8.8002 10.45V13.75C8.8002 14.1876 8.62636 14.6073 8.31692 14.9167C8.00749 15.2262 7.5878 15.4 7.1502 15.4H4.9502C4.51259 15.4 4.09291 15.2262 3.78347 14.9167C3.47404 14.6073 3.3002 14.1876 3.3002 13.75V10.45C3.3002 10.3042 3.35814 10.1643 3.46129 10.0611C3.56443 9.95797 3.70433 9.90002 3.8502 9.90002H8.2502C8.39607 9.90002 8.53596 9.95797 8.6391 10.0611C8.74225 10.1643 8.8002 10.3042 8.8002 10.45ZM13.2002 13.75V10.45C13.2002 10.3042 13.2581 10.1643 13.3613 10.0611C13.4644 9.95797 13.6043 9.90002 13.7502 9.90002H18.1502C18.2822 9.90002 18.4032 9.94622 18.4978 10.0243L18.5583 10.0936L18.5649 10.0892C18.6522 10.1891 18.7003 10.3173 18.7002 10.45V13.75C18.7002 14.1876 18.5264 14.6073 18.2169 14.9167C17.9075 15.2262 17.4878 15.4 17.0502 15.4H14.8502C14.4126 15.4 13.9929 15.2262 13.6835 14.9167C13.374 14.6073 13.2002 14.1876 13.2002 13.75Z" fill="#007B4B"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="header-middle-item">
+                            <div class="header-lang">                    
+                                <div class="header-lang-title">
+                                    РУС     
+                                    <svg class="header-lang-title-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#007B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                        
+                                <div class="header-lang-dropdown">
+                                    <ul class="lang">
+                                        <li>
+                                            <a href="#">                                        
+                                                ҚАЗ
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                ENG
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- конец средней шапки -->
+
+        <!-- начало нижней шапки -->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-row">
+                    <nav class="header-bottom-menu">
+                        <ul class="menu">
+                            <li>
+                                <a href="#">
+                                    Прием взносов
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="registration-payment-2.html">
+                                    Оформление выплаты
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Проверка пенсионного счета
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Выбор инвестиционного управляющего пенсионными активами
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- конец нижней шапки -->
+    </header>
+
+    <div class="information-section">
+        <div class="container">
+            <div class="information-row row">
+                <div class="information-col col-sm-2">
+                    <nav class="information-left-menu left-menu">
+                        <ul class="menu">
+                            <li>
+                                <div class="left-menu-dropdown-title">
+                                    Пенсионные взносы
+
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 9L5 5L1 1" stroke="#A5A5A5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <ul class="left-menu-dropdown">
+                                    <li class="active">
+                                        <a href="#">
+                                            Обязательные пенсионные взносы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Обязательные профессиональные пенсионные взносы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Добровольные пенсионные взносы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Обязательные пенсионные взносы работодателя 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <div class="left-menu-dropdown-title">
+                                    Пенсионные взносы
+
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 9L5 5L1 1" stroke="#A5A5A5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                
+                                <ul class="left-menu-dropdown">
+                                    <li>
+                                        <a href="#">
+                                            Обязательные пенсионные взносы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Обязательные профессиональные пенсионные взносы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Добровольные пенсионные взносы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Обязательные пенсионные взносы работодателя 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                       
+                    </nav>
+                    <div class="nav_line"></div>
+                    <div class="detailed-title">
+                       Дополнительно
+                    </div>
+
+                    <div class="detailed-item">
+                        Получить выписку 
+                        <a href="#"></a>
+                    </div>
+                    <div class="detailed-item">
+                        Получить справку о наличии ИПС 
+                        <a href="#"></a>
+                    </div>
+                    <div class="detailed-item">
+                        Внести изменения и (или) дополнения в реквизиты
+                        <a href="#"></a>
+                    </div>
+                    <div class="detailed-item">
+                        Получить выписку с ИПС на e-mail 
+                        <a href="#"></a>
+                    </div>
+                    <div class="detailed-item">
+                        Получить «дубликат» пенсионного договора 
+                        <a href="#"></a>
+                    </div>
+                    <div class="detailed-item">
+                        Пенсионный калькулятор 
+                        <a href="#"></a>
+                    </div>
+
+
+                </div>
+
+                <div class="information-col col-sm-10">
+                    <div class="breadcrumbs">
+                        <a href="#">
+                            Информация
+                        </a>
+                        <span>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#686868" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <a href="#">
+                            Вкладчикам и получателям
+                        </a>
+                    </div>
+
+                    <div class="block-top">
+                        <h1 class="block-titles bb-none-block-titles">
+                            Индивидуальный пенсионный счет 
+                        </h1>
+
+                        <a href="#" class="information-statistic">
+                            Статистика
+                        </a>
+                    </div>
+
+                    <div class="information-content">
+                        <p>
+                            <span class="span-success">Индивидуальный пенсионный счет (ИПС)</span> – это личный именной счет вкладчика (получателя пенсионных выплат), на котором учитываются пенсионные взносы, инвестиционный доход, пеня и иные поступления в соответствии с законодательством Республики Казахстан и с которого производятся пенсионные выплаты.
+                        </p>
+                        <p>
+                            Индивидуальные пенсионные счета вкладчиков (получателей) ведутся в тенге и отдельно по видам пенсионных взносов - обязательные пенсионные взносы (ОПВ), обязательные профессиональные пенсионные взносы (ОППВ) и добровольные пенсионные взносы (ДПВ).
+
+                        </p> 
+                        <br>    
+                        <span class="text-title">
+                            Как открыть ИПС?
+                        </span>
+                        <p>
+                            <span class="span-success"> Индивидуальный пенсионный счет (ИПС)</span> – это личный именной счет вкладчика (получателя пенсионных выплат), на котором учитываются пенсионные взносы, инвестиционный доход, пеня и иные поступления в соответствии с законодательством Республики Казахстан и с которого производятся пенсионные выплаты.
+                        </p>
+                        <p>
+                            Индивидуальные пенсионные счета вкладчиков (получателей) ведутся в тенге и отдельно по видам пенсионных взносов - обязательные пенсионные взносы (ОПВ), обязательные профессиональные пенсионные взносы (ОППВ) и добровольные пенсионные взносы (ДПВ).
+                        </p>
+                        <br>
+                        <span class="text-title">
+                            Как закрыть ИПС? 
+                        </span>
+                        <p>
+                            Индивидуальный пенсионный счет вкладчика (получателя) в ЕНПФ закрывается по истечении 1 (одного) месяца при условии отсутствия пенсионных накоплений. При этом отметим, что если на пенсионном счете имеются накопления, то они не будут закрываться даже при отсутствии новых отчислений.
+                        </p>
+                            
+                            
+                      
+                        
+                  
+                
+                    </div>
+                   
+                   
+                    <!-- начало аккордиона с вопросами -->
+                    <div class="reg-question-section">
+                        <h2 class="block-titles">
+                            Вопросы и ответы по данной теме
+                        </h2>
+
+                        <div class="reg-accordions">
+                            <div class="reg-accordion-item">
+                                <div class="reg-accordion-title">
+                                    <h3>
+                                        Почему в форме выписки с ИПС содержится неполная информация?
+                                    </h3>
+                                </div>
+
+                                <div class="reg-accordion-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est eligendi id odit reprehenderit quisquam qui quis dolores perspiciatis saepe tempora a, sit odio incidunt, quos mollitia rem similique fuga, facilis.
+                                    </p>
+                                </div>    
+                            </div>
+
+                            <div class="reg-accordion-item">
+                                <div class="reg-accordion-title">
+                                    <h3>
+                                        Как получить информацию о состоянии ИПС, в том числе по взносам, инвестиционном доходе в разбивке по месяцам, годам?                                    </h3>
+                                </div>
+
+                                <div class="reg-accordion-content">
+                                    <p>
+                                        Lorem2 ipsum dolor sit amet consectetur, adipisicing elit. Est eligendi id odit reprehenderit quisquam qui quis dolores perspiciatis saepe tempora a, sit odio incidunt, quos mollitia rem similique fuga, facilis.
+                                    </p>
+                                </div>    
+                            </div>
+
+                            <div class="reg-accordion-item">
+                                <div class="reg-accordion-title">
+                                    <h3>
+                                        Как можно нерезиденту получить выписку с ИПС?     
+                                    
+                                    </h3>
+                                </div>
+
+                                <div class="reg-accordion-content">
+                                    <p>
+                                        Lorem3 ipsum dolor sit amet consectetur, adipisicing elit. Est eligendi id odit reprehenderit quisquam qui quis dolores perspiciatis saepe tempora a, sit odio incidunt, quos mollitia rem similique fuga, facilis.
+                                    </p>
+                                </div>    
+                            </div>
+
+
+                         
+                        </div>
+
+                        <div type="button" class="registration-desc-more">
+                            <span>
+                                Показать еще
+                            </span>
+                             
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#007B4B" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- конец аккордиона с вопросами -->      
+                </div>
+            </div>
+        </div>
+    </div>              
+
+    <!-- начало подвала -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-top">
+                    <div class="footer-top-item">
+                        <nav class="footer-menu">
+                            <div class="footer-menu-top">
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            О Фонде
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            КОРПОРАТИВНОЕ УПРАВЛЕНИЕ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Руководство   
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Совет директоров и комитеты   
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Организационная структура   
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Документы   
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-menu-bottom">
+                                <ul class="menu menu-bottom">
+                                    <li class="footer-menu-bottom">
+                                        <a href="#">
+                                            НОРМАТИВНАЯ ПРАВОВАЯ БАЗА
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="footer-top-item">
+                        <nav class="footer-menu">
+                            <div class="footer-menu-top">
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            УПРАВЛЕНИЕ РИСКАМИ
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            ОБЩЕСТВЕННЫЙ СОВЕТ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Состав   
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Протоколы 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Презентации
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-menu-bottom">
+                                <ul class="menu menu-bottom">
+                                    <li class="footer-menu-bottom">
+                                        <a href="#">
+                                            СОТРУДНИЧЕСТВО С АО «КАЗПОЧТА»
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="footer-top-item">
+                        <nav class="footer-menu">
+                            <div class="footer-menu-top">
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            ЗАКУПКИ
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            КОНТРОЛЬ КАЧЕСТВА
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Политика в области качества   
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Комплаенс и служба качества 
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Сертификат
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Опрос
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="footer-menu-bottom">
+                                <ul class="menu menu-bottom">
+                                    <li class="footer-menu-bottom">
+                                        <a href="#">
+                                            Карта сайта
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="footer-top-item">
+                        <nav class="footer-menu">
+                            <div class="footer-menu-top">
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            ВАКАНСИИ
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            КОНТАКТЫ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Центральный аппарат  
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Региональная сеть
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            Прием посетителей 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="footer-top-item footer-top-item-app">
+                        <nav class="footer-menu">
+                            <div class="footer-menu-top">
+                                <ul class="menu">
+                                    <li class="footer-menu-title">
+                                        <a href="#">
+                                            МОБИЛЬНОЕ ПРИЛОЖЕНИЕ
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="footer-app-links">
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/Badge.png" alt="app">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/Badge-2.png" alt="app">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/Badge-3.png" alt="app">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-social">
+                        <div class="footer-bottom-title">
+                            Подписаться на соцсети
+                        </div>
+
+                        <ul class="social-menu">
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/icons/social-1.png" alt="social">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/icons/social-2.png" alt="social">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/icons/social-3.png" alt="social">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/icons/social-4.png" alt="social">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/icons/social-5.png" alt="social">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/icons/social-6.png" alt="social">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-bottom-right">
+                        <form class="footer-subscribe">
+                            <input type="email" name="email" id="email" placeholder="Введите ваш e-mail">
+                            <button type="submit" class="buttons">
+                                подписаться
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-copyright-wrap">
+                    <div class="footer-copyright">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.0001 8.80901C15.5511 7.89401 14.2036 6.29351 11.5086 6.52201C8.8136 6.75101 6.7921 9.26701 7.0171 12.4685C7.2421 15.6705 9.7121 17.5 11.9576 17.5C14.6526 17.5 16.0001 15.3045 16.0001 15.3045" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        
+                        АО «Единый накопительный пенсионный фонд»
+                    </div>
+
+                    <div class="footer-copyright-right">
+                        <div class="footer-bottom-title">
+                            Разработано:
+                        </div>
+
+                        <img src="assets/images/logo-crocos.png" alt="crocos">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- конец подвала -->
+    
+    <!-- модальные окна -->
+    <div class="youtube-modal" data-modal="1" aria-hidden="true">
+        <div class="youtube-item-modal">
+            <iframe src="https://www.youtube.com/embed/HUSh9D5tqgA" title="enpf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <button class="youtube-overlay-modal"></button>
+    </div>
+
+    <div class="modal-wrap" data-modal="modal-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/images/icons/close-modal.svg" alt="close" class="modal-close">
+            </div>
+
+            <div class="modal-body">
+                <canvas id="line-modal-1" style="width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-wrap" data-modal="modal-2">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/images/icons/close-modal.svg" alt="close" class="modal-close">
+            </div>
+
+            <div class="modal-body modal-table-body-wrap">
+                <div class="modal-table-body">
+                    <table class="calc-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Год
+                                </th>
+
+                                <th>
+                                    Возраст
+                                </th> 
+
+                                <th>
+                                    Базовая пенсия
+                                </th>
+
+                                <th>
+                                    Солидарная пенсия
+                                </th>
+
+                                <th>
+                                    ОПВ
+                                </th>
+
+                                <th>
+                                    ОППВ
+                                </th>
+
+                                <th>
+                                    ДПВ
+                                </th>
+
+                                <th>
+                                    Пенсионный аннуитет
+                                </th>
+
+                                <th>
+                                    Коэффициент замещения
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2052 
+                                </td>
+
+                                <td>
+                                    63 
+                                </td>
+
+                                <td>
+                                    34302  
+                                </td>
+
+                                <td>
+                                    23185
+                                </td>
+
+                                <td>
+                                    30969
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    88%
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg-close"></div>
+    <!-- модальные окна -->
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
