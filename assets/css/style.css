@@ -3885,6 +3885,7 @@ a {
     background: #E8E8E8;
     max-width: 180px;
     height: 1px;
+    margin-bottom: 30px;
 }
 
 
@@ -4128,6 +4129,24 @@ ol li ol {
     height: 100%;
 }
 
+<<<<<<< HEAD
 .smart_td--first .smart_table--main {
     height: auto;
+=======
+
+
+/*----------*/
+.text-title{
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 25px;
+/* identical to box height, or 114% */
+
+
+/* 05 enpf */
+margin-bottom: 14px;
+color: #2D2D2D;
+>>>>>>> 401b8fbcde806a0263929bd5db6d543e600dd5cf
 }
