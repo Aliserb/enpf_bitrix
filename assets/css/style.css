@@ -3405,6 +3405,7 @@ input.little-input {
     visibility: visible;
     opacity: 1;
     height: 100%;
+    display: block;
 }
 
 .information-accordion-item.active .information-accordion-title {
