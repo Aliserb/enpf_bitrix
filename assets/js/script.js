@@ -140,8 +140,15 @@ jQuery(($) => {
 });
 
 // youtube modal
-! function(e) { "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function(e) { for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n; return Boolean(o[n]) }), "function" != typeof e.closest && (e.closest = function(e) { for (var t = this; t && 1 === t.nodeType;) { if (t.matches(e)) return t;
-            t = t.parentNode } return null }) }(window.Element.prototype);
+! function(e) {
+    "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function(e) { for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n; return Boolean(o[n]) }), "function" != typeof e.closest && (e.closest = function(e) {
+        for (var t = this; t && 1 === t.nodeType;) {
+            if (t.matches(e)) return t;
+            t = t.parentNode
+        }
+        return null
+    })
+}(window.Element.prototype);
 
 document.addEventListener('DOMContentLoaded', function() {
     var modalButtons = document.querySelectorAll('.youtube-open-modal'),
@@ -248,9 +255,10 @@ $('.registration-desc-more, .reg-question-section .registration-desc-more').clic
 // registration form text learn more
 
 // reg accordion
-let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
-let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li');
-let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title');
+// let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
+let accordion = document.querySelector('.information-row');
+let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item');
+let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title');
 
 function toggleAccordion() {
     let thisItem = this.parentNode;
@@ -312,8 +320,15 @@ $(document).on('click', '.pension-calc-tab', function() {
 // tabs
 
 // calc modal
-! function(e) { "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function(e) { for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n; return Boolean(o[n]) }), "function" != typeof e.closest && (e.closest = function(e) { for (var t = this; t && 1 === t.nodeType;) { if (t.matches(e)) return t;
-            t = t.parentNode } return null }) }(window.Element.prototype);
+! function(e) {
+    "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function(e) { for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n; return Boolean(o[n]) }), "function" != typeof e.closest && (e.closest = function(e) {
+        for (var t = this; t && 1 === t.nodeType;) {
+            if (t.matches(e)) return t;
+            t = t.parentNode
+        }
+        return null
+    })
+}(window.Element.prototype);
 
 document.addEventListener('DOMContentLoaded', function() {
     var modalButtons = document.querySelectorAll('.modal-trigger-btn'),
@@ -417,3 +432,25 @@ const myChart2 = new Chart(
 // information accordion
 
 // reg accordion
+
+
+
+
+// smart_table
+$('.smart_table--main').click(function() {
+    if ($(this).data('elem')) {
+        let id = $(this).data('elem');
+        let th = $(this).data('th');
+        if ($(this).parents('.smart_table--td').hasClass('smart_td--first')) {
+            $('.smart_table--tr').removeClass('smart_tr--active');
+            $('.smart_table--td').removeClass('smart_td--active');
+        }
+
+        $('.smart_table--th').removeClass('smart_th--active');
+        $('.smart_th-' + th).addClass('smart_th--active');
+
+        $(this).parents('.smart_table--td').removeClass('smart_td--active');
+        $(this).parents('.smart_table--tr').addClass('smart_tr--active');
+        $(this).parents('.smart_table--tr').find('.smart_td-' + id).addClass('smart_td--active');
+    }
+});
