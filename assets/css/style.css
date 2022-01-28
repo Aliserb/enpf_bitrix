@@ -2601,6 +2601,7 @@ p {
     font: normal normal 18px/114.2% Futura PT;
     color: #2D2D2D;
     margin-bottom: 0;
+    width: 95%;
 }
 
 .reg-accordion-item.active .reg-accordion-content {
@@ -2617,7 +2618,6 @@ p {
 
 .reg-question-section {
     margin-top: 80px;
-    margin-bottom: 80px;
 }
 
 .reg-accordions {
@@ -3211,8 +3211,11 @@ input.little-input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 7px;
     cursor: pointer;
+}
+
+.left-menu .menu>li {
+    margin-bottom: 11px;
 }
 
 .left-menu .menu li.active .left-menu-dropdown-title {
@@ -3232,6 +3235,7 @@ input.little-input {
     visibility: visible;
     opacity: 1;
     height: 100%;
+    margin-top: 7px;
 }
 
 .left-menu-dropdown-title svg {
@@ -3405,6 +3409,7 @@ input.little-input {
     visibility: visible;
     opacity: 1;
     height: 100%;
+    display: block;
 }
 
 .information-accordion-item.active .information-accordion-title {
@@ -3471,6 +3476,60 @@ input.little-input {
     width: 100%;
     height: 2px;
     background: #FBBE2F;
+}
+
+.information-stage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 56px;
+    margin-bottom: 40px;
+}
+
+.information-stage-circle {
+    background: #007B4B;
+    border-radius: 50%;
+    width: 131px;
+    height: 131px;
+}
+
+.information-stage-icon {
+    background: #FBBE2F;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: -16px auto 0px auto;
+}
+
+.information-stage-title {
+    font: normal 400 18px/25px Futura PT;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.information-stage-item {
+    max-width: 247px;
+    font: normal normal 18px/25px Futura PT;
+    text-align: center;
+    color: #686868;
+}
+
+.information-list-title {
+    font: normal 500 18px/25px Futura PT;
+    color: #007B4B;
+}
+
+.information-list ul li {
+    font: normal 400 18px/25px Futura PT;
+    color: #686868;
+    position: relative;
+}
+
+.information-list ul {
+    padding-left: 20px;
 }
 
 
