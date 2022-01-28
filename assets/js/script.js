@@ -249,13 +249,14 @@ $('.registration-desc-more, .reg-question-section .registration-desc-more').clic
 // registration form text learn more
 
 // reg accordion
-let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
-let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li');
-let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title');
+// let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
+let accordion = document.querySelector('.information-row');
+let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item');
+let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title');
 
 function toggleAccordion() {
   let thisItem = this.parentNode;
-  
+
   items.forEach(item => {
     if (thisItem == item ) {
       // if this item is equal to the clicked item, open it.
@@ -418,3 +419,26 @@ const myChart2 = new Chart(
 // information accordion
 
 // reg accordion
+
+
+
+
+// smart_table
+$('.smart_table--main').click(function(){
+    if($(this).data('elem')){
+        let id = $(this).data('elem');
+        let th = $(this).data('th');
+        if($(this).parents('.smart_table--td').hasClass('smart_td--first')){
+            $('.smart_table--tr').removeClass('smart_tr--active');
+            $('.smart_table--td').removeClass('smart_td--active');
+        }
+
+        $('.smart_table--th').removeClass('smart_th--active');
+        $('.smart_th-'+th).addClass('smart_th--active');
+
+        $(this).parents('.smart_table--td').removeClass('smart_td--active');
+        $(this).parents('.smart_table--tr').addClass('smart_tr--active');
+        $(this).parents('.smart_table--tr').find('.smart_td-'+id).addClass('smart_td--active');
+    }
+});
+
