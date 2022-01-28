@@ -3905,3 +3905,14 @@ ol li ol {
 
 
 /****************/
+.six_tab td {
+
+    width: 100%;
+    padding: 22px 14px;
+}
+.six_tab td:nth-child(n) {
+    border-left: 0.4px solid #BABABA;
+}
+.six_tab td:nth-child(1) {
+    border-left:none;
+}
