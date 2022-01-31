@@ -28,6 +28,33 @@ $('.header-lang-title').click(function() {
 });
 // dropdown-lang
 
+// burger 
+$('.burger-btn').click(function(){
+    $('.burger-dropdown').toggleClass('active');
+  
+    if($('.burger-dropdown').hasClass('active')){
+        $('body').toggleClass('overflow-body');
+    } else{
+        $('.burger-dropdown').removeClass('active');
+    }
+});
+
+$('.burger-dropdown-close').click(function(){
+    $('.burger-dropdown').removeClass('active');
+    $('body').removeClass('overflow-body');
+});
+
+jQuery(function($) {
+    $(document).mouseup(function(e) {
+        var div = $(".burger-dropdow");
+        if (!div.is(e.target) &&
+            div.has(e.target).length === 0) {
+            $('.burger-dropdow, .burger-btn').removeClass('active');
+        }
+    });
+});
+// burger.
+
 var swiper = new Swiper(".mySwiper", {
     loop: true,
     navigation: {
@@ -83,7 +110,7 @@ function onTabClick(item) {
         }
 
         if (tabsItems.classList.contains('active')) {
-
+            
         }
     });
 }
