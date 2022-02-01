@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЕНПФ</title>
-
     <!-- библиотеки -->
     <link rel="stylesheet" href="assets/css/jquery.steps.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/hystmodal.min.css">
     <!-- библиотеки -->
 
     <!-- подключение шрифтов -->
-    <link href="assets/fonts/MuseoSansCyrl-700/style.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/fonts/montserrat/stylesheet.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/fonts/FuturaPT/stylesheet.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/fonts/proxima/stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/fonts/MuseoSansCyrl-700/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/montserrat/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/FuturaPT/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/fonts/proxima/stylesheet.css" rel="stylesheet" type="text/css" />
     <!-- подключение шрифтов -->
-    
+
     <!-- Подключение своих стилей -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
     <!-- Подключение своих стилей -->
 </head>
+
 <body>
     <header class="header">
         <!-- начало верхней шапки -->
@@ -38,6 +39,148 @@
                     </div>
                     <!-- логотип -->
 
+                    <div class="burger-menu">
+                        <div class="burger-btn">
+                            <span></span>
+                        </div>
+
+                        <!-- burger -->
+                        <div class="burger-dropdown">
+                            <div class="container">
+                                <div class="burger-row">
+                                    <div class="burger-header">
+                                        <div class="burger-dropdown-close">
+                                            <svg width="40" height="40" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9887 2.01186C13.0324 2.0554 13.067 2.10713 13.0906 2.16408C13.1143 2.22103 13.1264 2.28208 13.1264 2.34373C13.1264 2.40539 13.1143 2.46644 13.0906 2.52339C13.067 2.58034 13.0324 2.63207 12.9887 2.67561L2.67622 12.9881C2.5882 13.0761 2.46882 13.1256 2.34434 13.1256C2.21986 13.1256 2.10049 13.0761 2.01247 12.9881C1.92445 12.9001 1.875 12.7807 1.875 12.6562C1.875 12.5318 1.92445 12.4124 2.01247 12.3244L12.325 2.01186C12.3685 1.96821 12.4202 1.93357 12.4772 1.90994C12.5341 1.88631 12.5952 1.87415 12.6568 1.87415C12.7185 1.87415 12.7796 1.88631 12.8365 1.90994C12.8934 1.93357 12.9452 1.96821 12.9887 2.01186Z" fill="#9C9C9C"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.01271 2.01186C1.96906 2.0554 1.93443 2.10713 1.91079 2.16408C1.88716 2.22103 1.875 2.28208 1.875 2.34373C1.875 2.40539 1.88716 2.46644 1.91079 2.52339C1.93443 2.58034 1.96906 2.63207 2.01271 2.67561L12.3252 12.9881C12.4132 13.0761 12.5326 13.1256 12.6571 13.1256C12.7816 13.1256 12.9009 13.0761 12.989 12.9881C13.077 12.9001 13.1264 12.7807 13.1264 12.6562C13.1264 12.5318 13.077 12.4124 12.989 12.3244L2.67646 2.01186C2.63292 1.96821 2.58119 1.93357 2.52424 1.90994C2.4673 1.88631 2.40624 1.87415 2.34459 1.87415C2.28293 1.87415 2.22188 1.88631 2.16493 1.90994C2.10798 1.93357 2.05626 1.96821 2.01271 2.01186Z" fill="#9C9C9C"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="burger-body">
+                                        <div class="burger-body-item">
+                                            <div class="burger-search">
+                                                <form role="search">
+                                                    <input type="text" class="search" id="search" type="text" placeholder="Поиск" aria-label="Search">
+                                                    <button class="search-button" type="submit">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M15.6781 13.9271C16.8884 12.2755 17.4305 10.2278 17.1959 8.19373C16.9613 6.15963 15.9673 4.28911 14.4128 2.9564C12.8583 1.62369 10.8579 0.927069 8.81187 1.00591C6.76581 1.08475 4.82496 1.93323 3.37762 3.38161C1.93028 4.82998 1.08318 6.77144 1.00581 8.81756C0.928434 10.8637 1.62649 12.8636 2.96031 14.4171C4.29413 15.9707 6.16536 16.9633 8.19963 17.1964C10.2339 17.4296 12.2812 16.886 13.9319 15.6745H13.9306C13.9681 15.7245 14.0081 15.772 14.0531 15.8183L18.8654 20.6306C19.0998 20.8651 19.4178 20.9969 19.7493 20.9971C20.0809 20.9972 20.399 20.8656 20.6335 20.6312C20.8681 20.3968 20.9999 20.0789 21 19.7473C21.0001 19.4157 20.8685 19.0977 20.6341 18.8631L15.8218 14.0508C15.7771 14.0056 15.7291 13.9638 15.6781 13.9258V13.9271ZM16.0006 9.12226C16.0006 10.0251 15.8227 10.919 15.4773 11.7531C15.1318 12.5872 14.6254 13.3451 13.987 13.9834C13.3486 14.6218 12.5907 15.1282 11.7567 15.4737C10.9226 15.8192 10.0286 15.997 9.12582 15.997C8.22301 15.997 7.32905 15.8192 6.49497 15.4737C5.66089 15.1282 4.90302 14.6218 4.26464 13.9834C3.62626 13.3451 3.11987 12.5872 2.77438 11.7531C2.4289 10.919 2.25108 10.0251 2.25108 9.12226C2.25108 7.29896 2.97538 5.55034 4.26464 4.26108C5.5539 2.97182 7.30252 2.24752 9.12582 2.24752C10.9491 2.24752 12.6977 2.97182 13.987 4.26108C15.2763 5.55034 16.0006 7.29896 16.0006 9.12226Z" fill="#007B4B"/>
+                                                        </svg>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="burger-body-item">
+                                            <!-- контакты в шапке -->
+                                            <div class="header-contact">
+                                                <a href="tel:1418">
+                                                    1418
+                                                </a>
+
+                                                <p>
+                                                    Звонок по Казахстану бесплатный<br> Будние дни с 9:00 до 18:00
+                                                </p>
+                                            </div>
+                                            <!-- контакты в шапке -->
+
+                                            <!-- видеоконсультант -->
+                                            <div class="header-video-consul">
+                                                <a href="#">
+                                                    Видеоконсультант
+                                                </a>
+
+                                                <img src="assets/images/icons/video-consul.png" alt="camera">
+                                            </div>
+                                            <!-- видеоконсультант -->
+                                        </div>
+
+                                        <div class="burger-body-item">
+                                            <!-- личный кабинет -->
+                                            <div class="header-account-wrap">
+                                                <div class="header-account-item active">
+                                                    <a href="#">
+                                                        физические лица
+                                                    </a>
+                                                </div>
+
+                                                <div class="header-account-item">
+                                                    <a href="#">
+                                                        юридические лица
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- личный кабинет -->
+                                        </div>
+
+                                        <div class="burger-body-item">
+                                            <nav class="burger-menu">
+                                                <ul class="menu">
+                                                    <li>
+                                                        <a href="index.html">
+                                                            Наши услуги
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="information.html">
+                                                            Информация
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="contact.html">
+                                                            Связаться с нами
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">
+                                                            Вопросы-ответы
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+
+                                        <div class="menu-line"></div>
+
+                                        <div class="burger-body-item">
+                                            <nav class="burger-menu">
+                                                <ul class="menu">
+                                                    <li>
+                                                        <a href="#">
+                                                            Прием взносов
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="registration-payment-2.html">
+                                                            Оформление выплаты
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">
+                                                            Проверка пенсионного счета
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#">
+                                                            Выбор инвестиционного управляющего пенсионными активами
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- burger -->
+                    </div>
+
                     <div class="header-right">
                         <!-- контакты в шапке -->
                         <div class="header-contact">
@@ -46,14 +189,22 @@
                             </a>
 
                             <p>
-                                Звонок по Казахстану бесплатный<br>
-                                Будние дни с 9:00 до 18:00
+                                Звонок по Казахстану бесплатный<br> Будние дни с 9:00 до 18:00
                             </p>
                         </div>
                         <!-- контакты в шапке -->
 
-                        <!-- кнопка личный кабинет -->
+                        <!-- видеоконсультант -->
+                        <div class="header-video-consul">
+                            <a href="#">
+                                Видеоконсультант
+                            </a>
 
+                            <img src="assets/images/icons/video-consul.png" alt="camera">
+                        </div>
+                        <!-- видеоконсультант -->
+
+                        <!-- кнопка личный кабинет -->
                         <div class="header-account">
                             <div class="header-account-title">
                                 Личный кабинет
@@ -73,9 +224,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        
-
                         <!-- кнопка личный кабинет -->
                     </div>
                 </div>
@@ -125,14 +273,14 @@
                                             <path d="M15.6781 13.9271C16.8884 12.2755 17.4305 10.2278 17.1959 8.19373C16.9613 6.15963 15.9673 4.28911 14.4128 2.9564C12.8583 1.62369 10.8579 0.927069 8.81187 1.00591C6.76581 1.08475 4.82496 1.93323 3.37762 3.38161C1.93028 4.82998 1.08318 6.77144 1.00581 8.81756C0.928434 10.8637 1.62649 12.8636 2.96031 14.4171C4.29413 15.9707 6.16536 16.9633 8.19963 17.1964C10.2339 17.4296 12.2812 16.886 13.9319 15.6745H13.9306C13.9681 15.7245 14.0081 15.772 14.0531 15.8183L18.8654 20.6306C19.0998 20.8651 19.4178 20.9969 19.7493 20.9971C20.0809 20.9972 20.399 20.8656 20.6335 20.6312C20.8681 20.3968 20.9999 20.0789 21 19.7473C21.0001 19.4157 20.8685 19.0977 20.6341 18.8631L15.8218 14.0508C15.7771 14.0056 15.7291 13.9638 15.6781 13.9258V13.9271ZM16.0006 9.12226C16.0006 10.0251 15.8227 10.919 15.4773 11.7531C15.1318 12.5872 14.6254 13.3451 13.987 13.9834C13.3486 14.6218 12.5907 15.1282 11.7567 15.4737C10.9226 15.8192 10.0286 15.997 9.12582 15.997C8.22301 15.997 7.32905 15.8192 6.49497 15.4737C5.66089 15.1282 4.90302 14.6218 4.26464 13.9834C3.62626 13.3451 3.11987 12.5872 2.77438 11.7531C2.4289 10.919 2.25108 10.0251 2.25108 9.12226C2.25108 7.29896 2.97538 5.55034 4.26464 4.26108C5.5539 2.97182 7.30252 2.24752 9.12582 2.24752C10.9491 2.24752 12.6977 2.97182 13.987 4.26108C15.2763 5.55034 16.0006 7.29896 16.0006 9.12226Z" fill="#007B4B"/>
                                         </svg>
                                     </button>
-                                 </form>
+                                </form>
                             </div>
                         </div>
-                        
+
                         <div class="header-middle-item">
                             <div class="header-visually">
                                 <p>
-                                    Версия для слабовидящих 
+                                    Версия для слабовидящих
                                 </p>
 
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,14 +290,14 @@
                         </div>
 
                         <div class="header-middle-item">
-                            <div class="header-lang">                    
+                            <div class="header-lang">
                                 <div class="header-lang-title">
-                                    РУС     
+                                    РУС
                                     <svg class="header-lang-title-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 7.5L10 12.5L15 7.5" stroke="#007B4B" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                    
+                                    </svg>
                                 </div>
-                        
+
                                 <div class="header-lang-dropdown">
                                     <ul class="lang">
                                         <li>
@@ -181,25 +329,25 @@
                         <ul class="menu">
                             <li>
                                 <a href="#">
-                                    ПРИЕМ ВЗНОСОВ
+                                    Прием взносов
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="registration-payment-2.html">
+                                    Оформление выплаты
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    ОФОРМЛЕНИЕ ВЫПЛАТЫ
+                                    Проверка пенсионного счета
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    ПРОВЕРКА ПЕНСИОННОГО СЧЕТА
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    ВЫБОР ИНВЕСТИЦИОННОГО УПРАВЛЯЮЩЕГО ПЕНСИОННЫМИ АКТИВАМИ
+                                    Выбор инвестиционного управляющего пенсионными активами
                                 </a>
                             </li>
                         </ul>
@@ -216,7 +364,7 @@
                 Связаться с нами
             </h2>
             <div class="contact-row">
-                <div class="d-flex align-items-start row">
+                <div class="tab-block-wrap d-flex align-items-start row">
                     <div class="nav flex-column nav-pills col-sm-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="news-tab-link active" id="tab-section-1-tab" data-bs-toggle="pill" data-bs-target="#tab-section-1" type="button" role="tab" aria-controls="tab-section-1" aria-selected="true">
                             Написать
@@ -284,11 +432,107 @@
                         </div>
 
                         <div class="tab-pane fade" id="tab-section-2" role="tabpanel" aria-labelledby="tab-section-2-tab">
-                            ...
+                            <div class="tab-content-item-wrap">
+                                <div class="tab-content-item">
+                                    <div class="tab-content-item-heading">
+                                        <p>
+                                            Направить обращение
+                                        </p>
+
+                                        <img src="assets/images/icons/mail.svg" alt="icon-mail">
+                                    </div>
+
+                                    <div class="tab-content-item-body">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content-item">
+                                    <div class="tab-content-item-heading">
+                                        <p>
+                                            НАПИСАТЬ ОБРАЩЕНИЕ НА БЛОГ ПРЕДСЕДАТЕЛЯ
+                                        </p>
+
+                                        <img src="assets/images/icons/mail-2.svg" alt="icon-mail">
+                                    </div>
+
+                                    <div class="tab-content-item-body">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content-item">
+                                    <div class="tab-content-item-heading">
+                                        <p>
+                                            ПОДАТЬ ЗАЯВКУ НА ВЫЕЗДНОЕ ОБСЛУЖИВАНИЕ
+                                        </p>
+
+                                        <img src="assets/images/icons/mail-3.svg" alt="icon-mail">
+                                    </div>
+
+                                    <div class="tab-content-item-body">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="tab-section-3" role="tabpanel" aria-labelledby="tab-section-3-tab">
-                            ...
+                            <div class="tab-content-item-wrap">
+                                <div class="tab-content-item">
+                                    <div class="tab-content-item-heading">
+                                        <p>
+                                            Направить обращение
+                                        </p>
+
+                                        <img src="assets/images/icons/mail.svg" alt="icon-mail">
+                                    </div>
+
+                                    <div class="tab-content-item-body">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content-item">
+                                    <div class="tab-content-item-heading">
+                                        <p>
+                                            НАПИСАТЬ ОБРАЩЕНИЕ НА БЛОГ ПРЕДСЕДАТЕЛЯ
+                                        </p>
+
+                                        <img src="assets/images/icons/mail-2.svg" alt="icon-mail">
+                                    </div>
+
+                                    <div class="tab-content-item-body">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content-item">
+                                    <div class="tab-content-item-heading">
+                                        <p>
+                                            ПОДАТЬ ЗАЯВКУ НА ВЫЕЗДНОЕ ОБСЛУЖИВАНИЕ
+                                        </p>
+
+                                        <img src="assets/images/icons/mail-3.svg" alt="icon-mail">
+                                    </div>
+
+                                    <div class="tab-content-item-body">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -304,14 +548,14 @@
                     <button>
                         региональной сети
                     </button>
-                </div>  
+                </div>
                 <div class="contact-map-button active">
                     <button>
                         Опрос пользователей
                     </button>
                 </div>
             </div>
-            
+
             <div class="survey-wrap">
                 <form class="survey-quiz" id="survey-quiz">
                     <div class="swiper contact-quiz-slider">
@@ -319,7 +563,8 @@
                             <div class="swiper-slide">
                                 <div class="survey-item-top">
                                     <p class="survey-title">
-                                        АО «Единый Накопительный Пенсионный Фонд» выражает Вам свою признательность за сотрудничество с Фондом! Фонд стремится предоставить качественный и удобный сервис, и просит Вас уделить немного времени и принять участие в нашем опросе с целью улучшения качества обслуживания.
+                                        АО «Единый Накопительный Пенсионный Фонд» выражает Вам свою признательность за сотрудничество с Фондом! Фонд стремится предоставить качественный и удобный сервис, и просит Вас уделить немного времени и принять участие в нашем опросе с целью улучшения
+                                        качества обслуживания.
                                     </p>
 
                                     <fieldset class="form-group form-step">
@@ -329,14 +574,14 @@
                                                 Укажите, пожалуйста, наиболее предпочтительный канал взаимодействия с Фондом
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 очный (отделения ЕНПФ)
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -352,14 +597,14 @@
                                                 Оцените, пожалуйста, достаточное ли количество дистанционных каналов взаимодействия с Фондом
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 Да
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -368,7 +613,7 @@
                                         </div>
 
                                         <p class="form-condition-text">
-                                            В случае, если Вы выбрали вариант «нет», пожалуйста, оставьте комментарий, по выбранной оценке 
+                                            В случае, если Вы выбрали вариант «нет», пожалуйста, оставьте комментарий, по выбранной оценке
                                         </p>
 
                                         <div class="input-group input-text-group">
@@ -391,7 +636,7 @@
                                         </svg>
                                         Назад
                                     </button>
-        
+
                                     <button type="button" class="next-btn">
                                         Вперед
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -410,20 +655,20 @@
                                                 Посещали ли Вы официальный сайт, чтобы получить информацию о деятельности Фонда?
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-2" id="survey-quiz-3">
                                             <label for="survey-quiz-3">
                                                 Да
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-2" id="survey-quiz-4">
                                             <label for="survey-quiz-4">
                                                 Нет
                                             </label>
-                                        </div> 
+                                        </div>
                                     </fieldset>
 
                                     <fieldset class="form-group form-step form-step-2">
@@ -433,12 +678,12 @@
                                                 Укажите, пожалуйста, наиболее интересный для Вас раздел официального сайта ЕНПФ
                                             </span>
                                         </h4>
-                
+
                                         <div class="select-group">
                                             <input class="select__input" type="hidden" name="">
                                             <div class="select__head">
                                                 Выбрать
-                                               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.5 0.75L5 5.25L9.5 0.75" stroke="#007B4B" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </div>
@@ -462,14 +707,14 @@
                                                 Удовлетворены ли Вы полнотой и доступностью информации, размещенной на официальном сайте ЕНПФ?
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 Да
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -478,7 +723,7 @@
                                         </div>
 
                                         <p class="form-condition-text">
-                                            В случае, если Вы выбрали вариант «нет», пожалуйста, оставьте комментарий. 
+                                            В случае, если Вы выбрали вариант «нет», пожалуйста, оставьте комментарий.
                                         </p>
 
                                         <div class="input-group input-text-group">
@@ -501,7 +746,7 @@
                                         </svg>
                                         назад
                                     </button>
-        
+
                                     <button type="button" class="next-btn">
                                         вперед
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -520,14 +765,14 @@
                                                 Оцените степень удобства работы с интерфейсом официального сайта ЕНПФ: понятность навигации, поиск информации, порядок размещения и положения кнопок
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 Удобно
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -536,7 +781,7 @@
                                         </div>
 
                                         <p class="form-condition-text">
-                                            В случае, если Вы выбрали вариант «неудобно», пожалуйста, оставьте комментарий по выбранной оценке 
+                                            В случае, если Вы выбрали вариант «неудобно», пожалуйста, оставьте комментарий по выбранной оценке
                                         </p>
 
                                         <div class="input-group input-text-group">
@@ -559,7 +804,7 @@
                                         </svg>
                                         назад
                                     </button>
-        
+
                                     <button type="button" class="next-btn">
                                         вперед
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -578,14 +823,14 @@
                                                 Как Вы оцениваете доброжелательность и вежливость персонала, с которыми Вы взаимодействовали в дистанционной форме (с помощью удаленных сервисов, для получения консультации либо для подачи обращения)?
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 отлично
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -616,7 +861,7 @@
                                         </div>
                                     </fieldset>
                                 </div>
-                                
+
                                 <div class="step-btn-group">
                                     <button type="button" class="prev-btn">
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -624,7 +869,7 @@
                                         </svg>
                                         назад
                                     </button>
-        
+
                                     <button type="button" class="next-btn">
                                         вперед
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -643,14 +888,14 @@
                                                 Как Вы оцениваете профессионализм (компетентность) персонала при предоставлении Вам услуг в дистанционной форме? (с помощью удаленных сервисов, для получения консультации либо для подачи обращения)?
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 отлично
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -688,12 +933,12 @@
                                                 Какими из перечисленных электронных сервисов, представленных на официальном сайте ЕНПФ, Вы пользовались за последние 12 месяцев?
                                             </span>
                                         </h4>
-                
+
                                         <div class="select-group">
                                             <input class="select__input" type="hidden" name="">
                                             <div class="select__head">
                                                 Выбрать
-                                               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.5 0.75L5 5.25L9.5 0.75" stroke="#007B4B" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </div>
@@ -722,7 +967,7 @@
                                         </svg>
                                         назад
                                     </button>
-        
+
                                     <button type="button" class="next-btn">
                                         вперед
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -741,14 +986,14 @@
                                                 Как Вы оцениваете качество работы электронных сервисов, представленных на официальном сайте ЕНПФ?
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-1">
                                             <label for="survey-quiz-1">
                                                 отлично
                                             </label>
                                         </div>
-                
+
                                         <div class="input-group">
                                             <input type="radio" name="survey-quiz-1" id="survey-quiz-2">
                                             <label for="survey-quiz-2">
@@ -764,7 +1009,7 @@
                                         </div>
 
                                         <p class="form-condition-text">
-                                            В случае, если Вы выбрали вариант «плохо», пожалуйста, оставьте комментарий по выбранной оценке 
+                                            В случае, если Вы выбрали вариант «плохо», пожалуйста, оставьте комментарий по выбранной оценке
                                         </p>
 
                                         <div class="input-group input-text-group">
@@ -786,7 +1031,7 @@
                                                 Какие новые электронные услуги Вы бы хотели видеть на официальном сайте и в мобильном приложении ЕНПФ?
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group input-text-group">
                                             <input type="text" name="survey-quiz-3" id="survey-quiz-4">
                                         </div>
@@ -799,7 +1044,7 @@
                                                 Оставьте, пожалуйста, Ваши предложения по улучшению личного кабинета, официального сайта и мобильного приложения ЕНПФ
                                             </span>
                                         </h4>
-                
+
                                         <div class="input-group input-text-group">
                                             <input type="text" name="survey-quiz-3" id="survey-quiz-4">
                                         </div>
@@ -813,7 +1058,7 @@
                                         </svg>
                                         назад
                                     </button>
-        
+
                                     <button type="submit" class="send-btn">
                                         Голосовать
                                     </button>
@@ -826,14 +1071,14 @@
         </div>
     </div>
     <!-- опрос -->
- 
+
     <!--  начало новостей  -->
     <div class="news-section">
         <div class="container">
             <h2 class="block-titles">
                 Новости
 
-                <a href="#" class="all-link">
+                <a href="news.html" class="all-link">
                     Все новости 
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#007B4B" stroke-linecap="round" stroke-linejoin="round"/>
@@ -841,8 +1086,8 @@
                 </a>
             </h2>
             <div class="news-section-row">
-                <div class="d-flex align-items-start">
-                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="news-section-wrap d-flex align-items-start">
+                    <div class="nav flex-column nav-pills tabs-menu" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="news-tab-link active" id="news-section-1-tab" data-bs-toggle="pill" data-bs-target="#news-section-1" type="button" role="tab" aria-controls="news-section-1" aria-selected="true">
                             новости
                         </button>
@@ -855,59 +1100,139 @@
                             YouTube канал
                         </button>
                     </div>
-                <div class="tab-content-wrap" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active news-section-half-wrap" id="news-section-1" role="tabpanel" aria-labelledby="news-section-1-tab">
-                        <div class="news-section-first-half">
-                            <h3>
-                                Теперь все индивидуальные пенсионные счета в ЕНПФ открываются автоматически
-                            </h3>
-
-                            <div class="news-info">
-                                <span class="news-date">
-                                    09.11.2021
-                                </span>
-
-                                <span class="news-category">
-                                    Главные новости
-                                </span>
-                            </div>
-
-                            <p>
-                                Президент Республики Казахстан 12 октября 2021 года подписал Закон Республики Казахстан «О внесении изменений и дополнений в некоторые законодательные акты Республики Казахстан по вопросам социальной защиты отдельных...
-                            </p>
-
-                            <a href="#" class="news-link">
-                                Подробнее
-                            </a>
-                        </div>
-
-                        <div class="news-section-second-half">
-                            <div class="news-item">
+                    <div class="tab-content-wrap" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active news-section-half-wrap" id="news-section-1" role="tabpanel" aria-labelledby="news-section-1-tab">
+                            <div class="news-section-first-half">
                                 <h3>
-                                    Мобильные офисы ЕНПФ в текущем году оказали услуги в 762 населённых пунктах Казахстана
+                                    Теперь все индивидуальные пенсионные счета в ЕНПФ открываются автоматически
                                 </h3>
 
                                 <div class="news-info">
                                     <span class="news-date">
                                         09.11.2021
                                     </span>
-    
+
                                     <span class="news-category">
                                         Главные новости
                                     </span>
                                 </div>
+
+                                <p>
+                                    Президент Республики Казахстан 12 октября 2021 года подписал Закон Республики Казахстан «О внесении изменений и дополнений в некоторые законодательные акты Республики Казахстан по вопросам социальной защиты отдельных...
+                                </p>
+
+                                <a href="#" class="news-link">
+                                    Подробнее
+                                </a>
+                            </div>
+
+                            <div class="news-section-second-half">
+                                <div class="news-item">
+                                    <h3>
+                                        Мобильные офисы ЕНПФ в текущем году оказали услуги в 762 населённых пунктах Казахстана
+                                    </h3>
+
+                                    <div class="news-info">
+                                        <span class="news-date">
+                                            09.11.2021
+                                        </span>
+
+                                        <span class="news-category">
+                                            Главные новости
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="news-section-2" role="tabpanel" aria-labelledby="news-section-2-tab">
+                            <div class="news-section-first-half">
+                                <h3>
+                                    Теперь все индивидуальные пенсионные счета в ЕНПФ открываются автоматически2
+                                </h3>
+
+                                <div class="news-info">
+                                    <span class="news-date">
+                                        09.11.2021
+                                    </span>
+
+                                    <span class="news-category">
+                                        Главные новости
+                                    </span>
+                                </div>
+
+                                <p>
+                                    Президент Республики Казахстан 12 октября 2021 года подписал Закон Республики Казахстан «О внесении изменений и дополнений в некоторые законодательные акты Республики Казахстан по вопросам социальной защиты отдельных...
+                                </p>
+
+                                <a href="#" class="news-link">
+                                    Подробнее
+                                </a>
+                            </div>
+
+                            <div class="news-section-second-half">
+                                <div class="news-item">
+                                    <h3>
+                                        Мобильные офисы ЕНПФ в текущем году оказали услуги в 762 населённых пунктах Казахстана2
+                                    </h3>
+
+                                    <div class="news-info">
+                                        <span class="news-date">
+                                            09.11.2021
+                                        </span>
+
+                                        <span class="news-category">
+                                            Главные новости
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="news-section-3" role="tabpanel" aria-labelledby="news-section-3-tab">
+                            <div class="news-section-first-half">
+                                <h3>
+                                    Теперь все индивидуальные пенсионные счета в ЕНПФ открываются автоматически2
+                                </h3>
+
+                                <div class="news-info">
+                                    <span class="news-date">
+                                        09.11.2021
+                                    </span>
+
+                                    <span class="news-category">
+                                        Главные новости
+                                    </span>
+                                </div>
+
+                                <p>
+                                    Президент Республики Казахстан 12 октября 2021 года подписал Закон Республики Казахстан «О внесении изменений и дополнений в некоторые законодательные акты Республики Казахстан по вопросам социальной защиты отдельных...
+                                </p>
+
+                                <a href="#" class="news-link">
+                                    Подробнее
+                                </a>
+                            </div>
+
+                            <div class="news-section-second-half">
+                                <div class="news-item">
+                                    <h3>
+                                        Мобильные офисы ЕНПФ в текущем году оказали услуги в 762 населённых пунктах Казахстана2
+                                    </h3>
+
+                                    <div class="news-info">
+                                        <span class="news-date">
+                                            09.11.2021
+                                        </span>
+
+                                        <span class="news-category">
+                                            Главные новости
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="tab-pane fade" id="news-section-2" role="tabpanel" aria-labelledby="news-section-2-tab">
-                        ...
-                    </div>
-
-                    <div class="tab-pane fade" id="news-section-3" role="tabpanel" aria-labelledby="news-section-3-tab">
-                        ...
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -962,7 +1287,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="footer-menu-bottom">
                                 <ul class="menu menu-bottom">
                                     <li class="footer-menu-bottom">
@@ -1012,7 +1337,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="footer-menu-bottom">
                                 <ul class="menu menu-bottom">
                                     <li class="footer-menu-bottom">
@@ -1216,10 +1541,7 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16.0001 8.80901C15.5511 7.89401 14.2036 6.29351 11.5086 6.52201C8.8136 6.75101 6.7921 9.26701 7.0171 12.4685C7.2421 15.6705 9.7121 17.5 11.9576 17.5C14.6526 17.5 16.0001 15.3045 16.0001 15.3045" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-
-                        
-                        АО «Единый накопительный пенсионный фонд»
+                        </svg> АО «Единый накопительный пенсионный фонд»
                     </div>
 
                     <div class="footer-copyright-right">
@@ -1234,7 +1556,7 @@
         </div>
     </footer>
     <!-- конец подвала -->
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="assets/js/jquery.steps.min.js"></script>
@@ -1244,4 +1566,5 @@
     <script src="assets/js/hystmodal.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

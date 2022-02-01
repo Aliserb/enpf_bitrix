@@ -29,17 +29,17 @@ $('.header-lang-title').click(function() {
 // dropdown-lang
 
 // burger 
-$('.burger-btn').click(function(){
+$('.burger-btn').click(function() {
     $('.burger-dropdown').toggleClass('active');
-  
-    if($('.burger-dropdown').hasClass('active')){
+
+    if ($('.burger-dropdown').hasClass('active')) {
         $('body').toggleClass('overflow-body');
-    } else{
+    } else {
         $('.burger-dropdown').removeClass('active');
     }
 });
 
-$('.burger-dropdown-close').click(function(){
+$('.burger-dropdown-close').click(function() {
     $('.burger-dropdown').removeClass('active');
     $('body').removeClass('overflow-body');
 });
@@ -110,7 +110,7 @@ function onTabClick(item) {
         }
 
         if (tabsItems.classList.contains('active')) {
-            
+
         }
     });
 }
@@ -281,6 +281,26 @@ $('.registration-desc-more, .reg-question-section .registration-desc-more').clic
 });
 // registration form text learn more
 
+// tabs
+$(document).on('click', '.registration-tab', function() {
+    let cat = $(this).data('category');
+
+    $('.registration-tab-content.active').removeClass('active');
+    $('.registration-tab-content[data-category="' + cat + '"]').addClass('active');
+    $('.registration-tab.active').removeClass('active');
+    $('.registration-tab[data-category="' + cat + '"]').addClass('active');
+});
+
+$(document).on('click', '.pension-calc-tab', function() {
+    let cat = $(this).data('category');
+
+    $('.pension-calc-tab-content.active').removeClass('active');
+    $('.pension-calc-tab-content[data-category="' + cat + '"]').addClass('active');
+    $('.pension-calc-tab.active').removeClass('active');
+    $('.pension-calc-tab[data-category="' + cat + '"]').addClass('active');
+});
+// tabs
+
 // reg accordion
 // let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
 let accordion = document.querySelector('.information-row');
@@ -325,26 +345,6 @@ function hideTab() {
     });
 }
 // reg tabs
-
-// tabs
-$(document).on('click', '.registration-tab', function() {
-    let cat = $(this).data('category');
-
-    $('.registration-tab-content.active').removeClass('active');
-    $('.registration-tab-content[data-category="' + cat + '"]').addClass('active');
-    $('.registration-tab.active').removeClass('active');
-    $('.registration-tab[data-category="' + cat + '"]').addClass('active');
-});
-
-$(document).on('click', '.pension-calc-tab', function() {
-    let cat = $(this).data('category');
-
-    $('.pension-calc-tab-content.active').removeClass('active');
-    $('.pension-calc-tab-content[data-category="' + cat + '"]').addClass('active');
-    $('.pension-calc-tab.active').removeClass('active');
-    $('.pension-calc-tab[data-category="' + cat + '"]').addClass('active');
-});
-// tabs
 
 // calc modal
 ! function(e) {
