@@ -4112,7 +4112,7 @@ ol li ol {
 /****************/
 
 .six_tab td {
-    width: 100%;
+   
     padding: 22px 14px;
 }
 
@@ -4276,4 +4276,20 @@ ol li ol {
 
 .back-div-white{
     background-color: white !important;
+}
+
+.green_border{
+    border: 1px solid #007B4B;
+}
+.second-table-accordion td {
+    
+    font: normal normal 18px/32px Futura PT;
+    color: #686868;
+    padding: 14px 26px;
+}
+.second-table-accordion {
+    border: 1px solid #F1F1F1;
+     box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 0px;
 }
