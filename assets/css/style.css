@@ -4390,7 +4390,7 @@ ol li ol {
 /****************/
 
 .six_tab td {
-    width: 100%;
+   
     padding: 22px 14px;
 }
 
@@ -4554,4 +4554,53 @@ ol li ol {
 
 .back-div-white {
     background-color: white !important;
+}
+
+.green_border{
+    border: 1px solid #007B4B;
+}
+.second-table-accordion td {
+    
+    font: normal normal 18px/32px Futura PT;
+    color: #686868;
+    padding: 14px 26px;
+}
+.second-table-accordion {
+    border: 1px solid #F1F1F1;
+     box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+/*-----tab year-----*/
+.pension-year-menu .menu {
+    display: flex;
+   
+    padding: 0;
+    list-style-type: none;
+    align-items: stretch;
+    text-align: center;
+   
+}
+.pension-year-menu li.active {
+    background: #FBBE2F;
+    
+}
+.pension-year-menu li {
+    border: 1px solid #F1F1F1;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+}
+.pension-year-menu  .information-accordion ul li {
+    position: relative;
+     margin-bottom: 7px; 
+}
+.pension-year-menu ul{
+    margin-bottom: 0px;
+    
+}
+.pension-year-menu ul li{
+    margin-bottom: 0px;
+    border-bottom: none;
+    padding: 22px 10px;
+    
 }
