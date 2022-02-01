@@ -92,14 +92,22 @@ function onTabClick(item) {
         let currentBtn = item;
         let tabId = currentBtn.getAttribute("data-tab");
         let currentTub = document.querySelector(tabId);
+        let tabsBg = document.querySelector('.services-half-item-banner');
 
         if (currentBtn.classList.contains('active')) {
             currentBtn.classList.remove('active');
             currentTub.classList.remove('active');
+            if (item) {
+                tabsBg.classList.remove('noactive');
+            }
         } else if (!currentBtn.classList.contains('active')) {
             tabsBtn.forEach(function(item) {
                 item.classList.remove('active');
             });
+
+            if (item) {
+                tabsBg.classList.add('noactive');
+            }
 
             tabsItems.forEach(function(item) {
                 item.classList.remove('active');
@@ -107,10 +115,6 @@ function onTabClick(item) {
 
             currentBtn.classList.add('active');
             currentTub.classList.add('active');
-        }
-
-        if (tabsItems.classList.contains('active')) {
-
         }
     });
 }
@@ -124,6 +128,16 @@ $('.contact-map-filter-close').click(function() {
     } else {
         $('.contact-map-filter-body').show("slow");
     }
+});
+
+$('.contacts-map-right-burger').click(function() {
+    $('.contacts-map-right').toggleClass('active');
+
+    // if ($('.contacts-map-right').hasClass('close')) {
+    //     $('.contact-map-filter-body').hide(1000);
+    // } else {
+    //     $('.contact-map-filter-body').show("slow");
+    // }
 });
 // map filter button on contact page
 
@@ -298,6 +312,15 @@ $(document).on('click', '.pension-calc-tab', function() {
     $('.pension-calc-tab-content[data-category="' + cat + '"]').addClass('active');
     $('.pension-calc-tab.active').removeClass('active');
     $('.pension-calc-tab[data-category="' + cat + '"]').addClass('active');
+});
+
+$(document).on('click', '.answer-tab-btn', function() {
+    let cat = $(this).data('category');
+
+    $('.answer-item.active').removeClass('active');
+    $('.answer-item[data-category="' + cat + '"]').addClass('active');
+    $('.answer-tab-btn.active').removeClass('active');
+    $('.answer-tab-btn[data-category="' + cat + '"]').addClass('active');
 });
 // tabs
 

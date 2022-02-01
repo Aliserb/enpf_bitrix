@@ -25,9 +25,12 @@
     overflow: hidden;
 }
 
-.burger-btn {
+.burger-btn,
+.burger-dropdown-close {
     position: relative;
     width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .burger-btn>span {
@@ -232,6 +235,39 @@
         max-width: 100%;
         width: 100%;
     }
+    /* .contact-map-filter {
+        position: inherit;
+    } */
+    .contact-map-row {
+        display: block;
+        height: auto;
+    }
+    /* .contact-map-content {
+        margin-bottom: 20px;
+    } */
+    .contacts-map-right-burger {
+        display: flex;
+    }
+    .contacts-map-right {
+        top: 100px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .contacts-map-right.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    .map-branches-wrap {
+        max-height: 300px;
+    }
+    .contacts-map-right {
+        right: 15px;
+    }
+    .contact-map-filter-title,
+    .contacts-map-right-burger {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -258,6 +294,28 @@
     .survey-wrap {
         padding: 22px;
     }
+    .indicators-section-wrap .tab-pane {
+        flex-wrap: wrap;
+        padding: 0px 14px;
+    }
+    .indicators-first-half,
+    .indicators-second-half {
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    .indicators-second-half {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .indicators-box-wrap {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .indicators-box {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 840px) {
@@ -274,6 +332,14 @@
     .footer-copyright {
         margin-bottom: 20px
     }
+    .contact-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .indicators-section-wrap .tabs-menu {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -284,6 +350,9 @@
     .sub-services-content {
         padding: 22px;
     }
+    .questions_block {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -293,6 +362,15 @@
     .tabs-menu {
         margin-bottom: 20px;
         width: 100%
+    }
+    .survey-quiz .form-group {
+        width: 100%;
+    }
+    .block-titles {
+        font-size: 24px;
+    }
+    .indicators-half-title {
+        font-size: 18px;
     }
 }
 
@@ -358,8 +436,23 @@
         padding: 6px;
     }
     .tab-content-item-heading p,
-    .tab-content-item-body p {
+    .tab-content-item-body p,
+    .map-search-title,
+    .branch-name,
+    .map-your_city-title {
         font-size: 16px;
         line-height: 22px;
+    }
+    .contact-map-filter {
+        left: 10px;
+    }
+    .contacts-map-right-burger {
+        right: 10px;
+    }
+    .map-search-form input {
+        font-size: 12px;
+    }
+    .contacts-map-right {
+        right: 0;
     }
 }
