@@ -734,7 +734,7 @@ p {
 }
 
 .news-tab-link {
-    font: normal normal 18px/23px Futura PT;
+    font: normal normal 14px/18px Futura PT;
     color: #A5A5A5;
     background: transparent;
     border: none;
@@ -1986,6 +1986,8 @@ p {
     text-align: center;
     color: #2D2D2D;
     margin-right: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .events-date span {
@@ -2149,6 +2151,7 @@ p {
     height: 100%;
     opacity: 0;
     visibility: hidden;
+    z-index: 20;
 }
 
 .youtube-item-modal {
@@ -2692,6 +2695,10 @@ p {
     overflow: visible;
 }
 
+.video-instruction-section {
+    margin-top: 80px;
+}
+
 .video-instruction-carousel {
     display: flex;
     align-items: center;
@@ -2704,6 +2711,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 35px;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -2718,11 +2726,13 @@ p {
 .video-instruction-swiper {
     max-width: 840px;
     width: 100%;
+    margin: 0px 20px;
 }
 
-.video-instruction-swiper .swiper-slide {
+
+/* .video-instruction-swiper .swiper-slide {
     max-width: 274px;
-}
+} */
 
 .video-instruction-carousel {
     margin-top: 40px;
@@ -2958,6 +2968,8 @@ p {
 .pension-calc-menu li {
     width: 33%;
     cursor: pointer;
+    font: normal normal 16px/21px Futura PT;
+    color: #2D2D2D;
 }
 
 .pension-calc-menu li.active {
@@ -3751,6 +3763,15 @@ input.little-input {
     padding: 9px 30px;
 }
 
+.question-n-answer-search input:focus {
+    border: 1px solid #007B4B;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.question-n-answer-search input:focus+.search-button {
+    border-radius: 0px 8px 0px 0px;
+}
+
 .question-n-answer-search input::placeholder {
     font: normal 300 16px/21px Futura PT;
     color: #A5A5A5;
@@ -3766,6 +3787,7 @@ input.little-input {
     border-radius: 0px 10px 10px 0px;
     width: 45px;
     height: 100%;
+    transition: all 0.3s ease 0s;
 }
 
 .search-example {
@@ -3843,6 +3865,7 @@ input.little-input {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
 .answer-accordion {
@@ -3950,6 +3973,31 @@ input.little-input {
 
 .answer-helpful-choice-item.active {
     color: #007B4B;
+}
+
+.answer-accordion-item-body {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+.answer-accordion-item.active .answer-accordion-item-body {
+    visibility: visible;
+    opacity: 1;
+    position: inherit;
+    border-top: 1px solid #007B4B;
+}
+
+.answer-accordion-item.active .answer-accordion-item-title {
+    background: #F1F1F1;
+}
+
+.answer-accordion-item-title svg {
+    transition: all 0.3s ease 0s;
+}
+
+.answer-accordion-item.active .answer-accordion-item-title svg {
+    transform: rotate(180deg);
 }
 
 
@@ -4278,7 +4326,7 @@ a {
     background: #E8E8E8;
     max-width: 180px;
     height: 1px;
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
 
 
@@ -4390,7 +4438,6 @@ ol li ol {
 /****************/
 
 .six_tab td {
-   
     padding: 22px 14px;
 }
 
@@ -4556,51 +4603,55 @@ ol li ol {
     background-color: white !important;
 }
 
-.green_border{
+.green_border {
     border: 1px solid #007B4B;
 }
+
 .second-table-accordion td {
-    
     font: normal normal 18px/32px Futura PT;
     color: #686868;
     padding: 14px 26px;
 }
+
 .second-table-accordion {
     border: 1px solid #F1F1F1;
-     box-sizing: border-box;
+    box-sizing: border-box;
     border-radius: 10px;
     margin-bottom: 0px;
 }
+
+
 /*-----tab year-----*/
+
 .pension-year-menu .menu {
     display: flex;
-   
     padding: 0;
     list-style-type: none;
     align-items: stretch;
     text-align: center;
-   
 }
+
 .pension-year-menu li.active {
     background: #FBBE2F;
-    
 }
+
 .pension-year-menu li {
     border: 1px solid #F1F1F1;
     cursor: pointer;
     border-radius: 10px 10px 0px 0px;
 }
-.pension-year-menu  .information-accordion ul li {
+
+.pension-year-menu .information-accordion ul li {
     position: relative;
-     margin-bottom: 7px; 
+    margin-bottom: 7px;
 }
-.pension-year-menu ul{
+
+.pension-year-menu ul {
     margin-bottom: 0px;
-    
 }
-.pension-year-menu ul li{
+
+.pension-year-menu ul li {
     margin-bottom: 0px;
     border-bottom: none;
     padding: 22px 10px;
-    
 }
