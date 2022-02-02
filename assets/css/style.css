@@ -3621,7 +3621,9 @@ input.little-input {
 }
 
 .information-doc:last-child {
+    /*
     margin-bottom: 0;
+    */
 }
 
 .information-doc-icon {
@@ -3661,7 +3663,9 @@ input.little-input {
 }
 
 .information-doc:last-child {
+    /*
     margin-bottom: 0;
+    */
 }
 
 .information-doc-icon {
@@ -4369,6 +4373,7 @@ a {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
+    overflow: auto;
 }
 
 
@@ -4610,7 +4615,7 @@ ol li ol {
 .second-table-accordion td {
     font: normal normal 18px/32px Futura PT;
     color: #686868;
-    padding: 14px 26px;
+    padding: 22px 10px;
 }
 
 .second-table-accordion {
@@ -4654,4 +4659,46 @@ ol li ol {
     margin-bottom: 0px;
     border-bottom: none;
     padding: 22px 10px;
+<<<<<<< HEAD
+=======
+    
+}
+
+
+/*-------*/
+.second-table-accordion{
+    text-align: center;
+}
+.url{
+    color:#007B4B !important;
+    text-decoration: underline !important;
+}
+
+.border-all td{
+    border: 0.4px solid #BABABA;
+}
+.otchet_item img{
+    max-height: 274px;
+    object-fit: contain;
+}
+.otchet_name{
+    max-width: 146px;
+    margin: auto;
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+text-align: center;
+
+/* enpf green */
+
+color:  #2D2D2D;;
+}
+.otchet_item:hover .otchet_name {
+    color: #007B4B;
+}
+.sp_otch{
+    margin-bottom: 7px;
+>>>>>>> 7d7c154c48bc8f433e006780c6dc9a1b424135d8
 }
