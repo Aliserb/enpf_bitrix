@@ -3609,7 +3609,9 @@ input.little-input {
 }
 
 .information-doc:last-child {
+    /*
     margin-bottom: 0;
+    */
 }
 
 .information-doc-icon {
@@ -3649,7 +3651,9 @@ input.little-input {
 }
 
 .information-doc:last-child {
+    /*
     margin-bottom: 0;
+    */
 }
 
 .information-doc-icon {
@@ -4321,6 +4325,7 @@ a {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
+    overflow: auto;
 }
 
 
@@ -4563,7 +4568,7 @@ ol li ol {
     
     font: normal normal 18px/32px Futura PT;
     color: #686868;
-    padding: 14px 26px;
+    padding: 22px 10px;
 }
 .second-table-accordion {
     border: 1px solid #F1F1F1;
@@ -4603,4 +4608,42 @@ ol li ol {
     border-bottom: none;
     padding: 22px 10px;
     
+}
+
+
+/*-------*/
+.second-table-accordion{
+    text-align: center;
+}
+.url{
+    color:#007B4B !important;
+    text-decoration: underline !important;
+}
+
+.border-all td{
+    border: 0.4px solid #BABABA;
+}
+.otchet_item img{
+    max-height: 274px;
+    object-fit: contain;
+}
+.otchet_name{
+    max-width: 146px;
+    margin: auto;
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+text-align: center;
+
+/* enpf green */
+
+color:  #2D2D2D;;
+}
+.otchet_item:hover .otchet_name {
+    color: #007B4B;
+}
+.sp_otch{
+    margin-bottom: 7px;
 }
