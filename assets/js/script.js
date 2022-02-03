@@ -79,6 +79,28 @@ var swiper3 = new Swiper(".video-instruction-swiper", {
         nextEl: ".video-instruction-next",
         prevEl: ".video-instruction-prev",
     },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+        560: {
+            slidesPerView: 2,
+
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 40
+        },
+
+        768: {
+            slidesPerView: 3,
+        },
+    }
 });
 // swiper sliders
 
@@ -327,8 +349,8 @@ $(document).on('click', '.answer-tab-btn', function() {
 // reg accordion
 // let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
 let accordion = document.querySelector('.information-row');
-let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item');
-let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title');
+let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item, .answer-accordion-item');
+let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title, .answer-accordion-item-title');
 
 function toggleAccordion() {
     let thisItem = this.parentNode;
