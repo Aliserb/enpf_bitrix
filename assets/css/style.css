@@ -4728,5 +4728,32 @@ ol li ol {
 
 .sp_otch {
     margin-bottom: 7px;
-    >>>>>>>7d7c154c48bc8f433e006780c6dc9a1b424135d8
+    <<<<<<< HEAD>>>>>>>7d7c154c48bc8f433e006780c6dc9a1b424135d8=======
+}
+
+.instruction_item {
+    border-radius: 7px 7px 0px 0px;
+    overflow: hidden;
+    background-color: #F1F1F1;
+    width: 100%;
+    padding-bottom: 45px;
+}
+
+.area_step_yellow {
+    background-color: #F7C12F;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 25px;
+    /* identical to box height, or 78% */
+    margin-bottom: 32px;
+    color: #2D2D2D;
+    padding: 21px;
+}
+
+.img_origin {
+    width: auto !important;
+    margin: auto;
+    >>>>>>>086614920dd87c86873e07d85c496f22d34476a1
 }

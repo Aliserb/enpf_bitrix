@@ -526,3 +526,39 @@ $('.smart_table--main').click(function() {
         $(this).parents('.smart_table--tr').find('.smart_td-' + id).addClass('smart_td--active');
     }
 });
+
+
+var swiper10 = new Swiper(".video-instruction-swiper-2", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    
+    navigation: {
+        nextEl: ".video-instruction-next",
+        prevEl: ".video-instruction-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+      },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+        560: {
+            slidesPerView: 1,
+
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 40
+        },
+
+        768: {
+            slidesPerView: 1,
+        },
+    }
+});
