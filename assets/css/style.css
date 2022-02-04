@@ -3728,11 +3728,13 @@ input.little-input {
     margin-bottom: 0;
 }
 
-.smart-table-tooltip-icon {
+.smart-table-tooltip-icon,
+.content-tooltip {
     vertical-align: super;
 }
 
-.smart-table-tooltip-icon::after {
+.smart-table-tooltip-icon::after,
+.content-tooltip::after {
     content: attr(tooltip);
     background: rgba(107, 106, 106, 0.85);
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
@@ -3748,9 +3750,20 @@ input.little-input {
     transition: all 0.3s ease 0s;
 }
 
-.smart-table-tooltip-icon:hover::after {
+.content-tooltip:hover::after,
+.content-tooltip:active::after,
+.content-tooltip:focus::after {
     visibility: visible;
     opacity: 1;
+}
+
+.content-tooltip {
+    position: relative;
+}
+
+.content-tooltip::after {
+    left: -150px;
+    width: 600px;
 }
 
 .table__tabs--info li {

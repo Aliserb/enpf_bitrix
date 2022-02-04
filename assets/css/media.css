@@ -658,7 +658,8 @@
     .table__tabs--info {
         padding: 15px 25px;
     }
-    .accordion-info-title-left {
+    .accordion-info-title-left,
+    .information-content ul {
         align-items: flex-start;
         font-size: 14px;
     }
