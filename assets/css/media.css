@@ -301,6 +301,25 @@
     .detailed-item:last-child {
         margin-bottom: 10px;
     }
+    .information-row {
+        margin: 20px 0px 40px 0px;
+    }
+    .information-stage {
+        display: block;
+    }
+    .information-stage-item svg {
+        display: none;
+    }
+    .information-stage-item svg.information-stage-arrow-mobile {
+        display: block;
+        margin: 0 auto;
+    }
+    .information-stage-item,
+    .information-stage-circle {
+        margin: 40px auto 0px auto;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -316,6 +335,12 @@
     .registration-form-row .col-sm-12 {
         margin-bottom: 30px;
     }
+    .left-menu-dropdown-title {
+        justify-content: flex-start;
+    }
+    .left-menu-dropdown-title svg {
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -323,7 +348,9 @@
         flex-wrap: wrap;
     }
     .services-first-half,
-    .services-second-half {
+    .services-second-half,
+    .smart_table--th,
+    .smart_tr--active .smart_td--first {
         width: 100%
     }
     .sub-services-content h3 {
@@ -372,7 +399,9 @@
         margin-right: 20px;
         margin-bottom: 20px;
     }
-    .publications-filter {
+    .publications-filter,
+    .table__tabs--info,
+    .smart_table--tr {
         flex-wrap: wrap;
     }
     .press-search {
@@ -413,6 +442,10 @@
     .performance-item-text {
         width: 100%;
     }
+    .table-wrap,
+    .table_rad {
+        overflow-x: scroll;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -427,7 +460,8 @@
         display: none;
     }
     .contact-map-buttons,
-    .press-filter-input-group {
+    .press-filter-input-group,
+    .block-top {
         flex-wrap: wrap;
     }
     .contact-map-button {
@@ -445,6 +479,9 @@
     }
     .checkbox-label {
         width: auto;
+    }
+    .information-statistic {
+        margin-top: 10px;
     }
 }
 
@@ -505,6 +542,19 @@
     .form-number-group input,
     .registration-form-input-group span {
         margin-bottom: 10px;
+    }
+    .block-titles {
+        line-height: 32px;
+    }
+    .smart_th--first,
+    .smart_td--first {
+        min-width: 200px;
+    }
+    .smart_table--body .smart_table--main {
+        overflow: visible;
+    }
+    ol {
+        margin: 0 0 0 5px;
     }
 }
 
@@ -597,5 +647,19 @@
     }
     .services-first-half .services-item {
         height: 220px;
+    }
+    .information-doc {
+        align-items: flex-start;
+    }
+    ol,
+    .information-accordion-body p {
+        font-size: 14px;
+    }
+    .table__tabs--info {
+        padding: 15px 25px;
+    }
+    .accordion-info-title-left {
+        align-items: flex-start;
+        font-size: 14px;
     }
 }

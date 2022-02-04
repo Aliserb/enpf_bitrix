@@ -2620,11 +2620,11 @@ p {
 .reg-accordion-content {
     opacity: 0;
     visibility: hidden;
+    height: 0;
     transition: all .6s ease-in-out;
-    padding: 22px;
     background: #F1F1F1;
-    max-height: 0;
-    position: absolute;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
 .reg-accordion-title {
@@ -2670,8 +2670,9 @@ p {
 .reg-accordion-item.active .reg-accordion-content {
     opacity: 1;
     visibility: visible;
-    max-height: 500px;
-    position: relative;
+    height: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 
 .reg-accordion-item {
@@ -3599,6 +3600,10 @@ input.little-input {
     color: #686868;
 }
 
+.information-stage-arrow-mobile {
+    display: none;
+}
+
 .information-list-title {
     font: normal 500 18px/25px Futura PT;
     color: #007B4B;
@@ -3734,6 +3739,18 @@ input.little-input {
     padding: 17px 22px 14px 14px;
     font: normal normal 18px/25px Futura PT;
     color: #FFFFFF;
+    position: absolute;
+    top: 100%;
+    left: -130px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.smart-table-tooltip-icon:hover::after {
+    visibility: visible;
+    opacity: 1;
 }
 
 .table__tabs--info li {
@@ -4461,7 +4478,7 @@ ol li ol {
     border: 1px solid #F1F1F1;
     box-sizing: border-box;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .smart_table--tr {
@@ -4496,7 +4513,9 @@ ol li ol {
     width: 100%;
     width: 0;
     transition: width 0.5s ease;
-    overflow: hidden;
+    /* overflow: hidden; */
+    visibility: hidden;
+    opacity: 0;
     border-bottom: 1px solid #F1F1F1;
 }
 
@@ -4546,18 +4565,22 @@ ol li ol {
 .smart_table--body .smart_table--main {
     cursor: pointer;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: width 0.5s ease;
 }
 
 .smart_td--first {
     min-width: 320px;
     width: 100%;
+    visibility: visible;
+    opacity: 1;
 }
 
 .smart_tr--active .smart_td--first {
     width: 0;
     border-bottom: 1px solid #FBBE2F;
+    visibility: visible;
+    opacity: 1;
 }
 
 .smart_table--main:hover .table__tabs--info {
@@ -4568,6 +4591,8 @@ ol li ol {
 .smart_td--active {
     width: 100%;
     border-bottom: 1px solid #FBBE2F;
+    visibility: visible;
+    opacity: 1;
 }
 
 .smart_table--list {
@@ -4659,58 +4684,62 @@ ol li ol {
     margin-bottom: 0px;
     border-bottom: none;
     padding: 22px 10px;
-<<<<<<< HEAD
-=======
-    
+    <<<<<<< HEAD=======
 }
 
 
 /*-------*/
-.second-table-accordion{
+
+.second-table-accordion {
     text-align: center;
 }
-.url{
-    color:#007B4B !important;
+
+.url {
+    color: #007B4B !important;
     text-decoration: underline !important;
 }
 
-.border-all td{
+.border-all td {
     border: 0.4px solid #BABABA;
 }
-.otchet_item img{
+
+.otchet_item img {
     max-height: 274px;
     object-fit: contain;
 }
-.otchet_name{
+
+.otchet_name {
     max-width: 146px;
     margin: auto;
     font-family: "Futura PT";
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 23px;
-text-align: center;
-
-/* enpf green */
-
-color:  #2D2D2D;;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    /* enpf green */
+    color: #2D2D2D;
+    ;
 }
+
 .otchet_item:hover .otchet_name {
     color: #007B4B;
 }
-.sp_otch{
-    margin-bottom: 7px;
 
+.sp_otch {
+    margin-bottom: 7px;
+    <<<<<<< HEAD>>>>>>>7d7c154c48bc8f433e006780c6dc9a1b424135d8=======
 }
 
-.instruction_item{
+.instruction_item {
     border-radius: 7px 7px 0px 0px;
     overflow: hidden;
-    background-color:  #F1F1F1;
+    background-color: #F1F1F1;
     width: 100%;
     padding-bottom: 45px;
 }
-.area_step_yellow{
+
+.area_step_yellow {
     background-color: #F7C12F;
     font-family: "Futura PT";
     font-style: normal;
@@ -4718,14 +4747,13 @@ color:  #2D2D2D;;
     font-size: 32px;
     line-height: 25px;
     /* identical to box height, or 78% */
-
-
     margin-bottom: 32px;
-
     color: #2D2D2D;
     padding: 21px;
 }
-.img_origin{
+
+.img_origin {
     width: auto !important;
     margin: auto;
+    >>>>>>>086614920dd87c86873e07d85c496f22d34476a1
 }
