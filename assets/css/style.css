@@ -2706,7 +2706,8 @@ p {
     justify-content: space-between;
 }
 
-.video-instruction-arrow {
+.video-instruction-arrow,
+.carousel-4-arrow {
     background: #CDDED6;
     box-shadow: 0px 4px 100px rgba(90, 90, 90, 0.16);
     display: flex;
@@ -4036,6 +4037,111 @@ input.little-input {
 
 
 /* information */
+
+
+/* carousel 4 */
+
+.carousel-4-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-4-prev {
+    margin-right: 45px;
+}
+
+.carousel-4-next {
+    margin-left: 45px;
+}
+
+.carousel-4-title,
+.carousel-4-date {
+    font: normal normal 18px/23px Futura PT;
+    color: #2D2D2D;
+    transition: all 0.3s ease 0s;
+}
+
+.carousel-4-item:hover .carousel-4-title,
+.carousel-4-item:hover .carousel-4-date {
+    color: #007B4B;
+}
+
+.carousel-4-title {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.carousel-4-elements {
+    margin: 40px 0px;
+}
+
+
+/* carousel 4 */
+
+
+/* step slider */
+
+.step-slider {
+    position: relative;
+}
+
+.step-slider-prev,
+.step-slider-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+
+.step-slider-prev {
+    left: 28px;
+}
+
+.step-slider-next {
+    right: 28px;
+}
+
+.step-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25px;
+    margin-bottom: 34px;
+    margin-top: 5px;
+}
+
+.step-pagination .swiper-pagination-bullet {
+    background: none;
+    width: auto;
+    font: normal normal 18px/25px Futura PT;
+    color: #A5A5A5;
+    position: relative;
+    opacity: 1;
+    padding-left: 26px;
+}
+
+.step-pagination .swiper-pagination-bullet::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: #F1F1F1;
+    border-radius: 50%;
+}
+
+.step-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    font: normal normal 18px/25px Futura PT;
+    color: #686868;
+}
+
+.step-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+    background: #FBBE2F;
+}
+
+
+/* step slider */
 
 .modal-content {
     max-width: 1200px;

@@ -102,6 +102,51 @@ var swiper3 = new Swiper(".video-instruction-swiper", {
         },
     }
 });
+
+var swiper4 = new Swiper(".carousel-4", {
+    slidesPerView: 4,
+    spaceBetween: 41,
+    loop: true,
+    navigation: {
+        nextEl: ".carousel-4-next",
+        prevEl: ".carousel-4-prev",
+    },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+        560: {
+            slidesPerView: 2,
+
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 40
+        },
+        768: {
+            slidesPerView: 4,
+        },
+    }
+});
+
+var swiper4 = new Swiper(".stepSlider", {
+    navigation: {
+        nextEl: ".step-slider-next",
+        prevEl: ".step-slider-prev",
+    },
+    pagination: {
+        el: ".step-pagination",
+        clickable: true,
+        renderBullet: function(index, className) {
+            return '<span class="' + className + '">' + 'Шаг' + ' ' + (index + 1) + "</span>";
+        },
+    },
+});
 // swiper sliders
 
 const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
@@ -531,14 +576,14 @@ $('.smart_table--main').click(function() {
 var swiper10 = new Swiper(".video-instruction-swiper-2", {
     slidesPerView: 1,
     spaceBetween: 24,
-    
+
     navigation: {
         nextEl: ".video-instruction-next",
         prevEl: ".video-instruction-prev",
     },
     pagination: {
         el: ".swiper-pagination",
-      },
+    },
     breakpoints: {
         200: {
             slidesPerView: 1,
