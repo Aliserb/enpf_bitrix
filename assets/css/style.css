@@ -3030,7 +3030,7 @@ p {
 input.little-input {
     text-align: center;
     width: 70px;
-    mr
+    
 }
 
 .registration-form-input-group span {
@@ -3139,7 +3139,7 @@ input.little-input {
 }
 
 .modal-table-body {
-    max-height: ;
+    
 }
 
 
@@ -4820,7 +4820,7 @@ ol li ol {
     margin-bottom: 0px;
     border-bottom: none;
     padding: 22px 10px;
-    <<<<<<< HEAD=======
+   
 }
 
 
@@ -4864,7 +4864,7 @@ ol li ol {
 
 .sp_otch {
     margin-bottom: 7px;
-    <<<<<<< HEAD>>>>>>>7d7c154c48bc8f433e006780c6dc9a1b424135d8=======
+   
 }
 
 .instruction_item {
@@ -4891,5 +4891,45 @@ ol li ol {
 .img_origin {
     width: auto !important;
     margin: auto;
-    >>>>>>>086614920dd87c86873e07d85c496f22d34476a1
+
+}
+
+/***********/
+.app_item{
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 27px;
+/* identical to box height, or 169% */
+
+
+/* enpf green */
+
+color: #007B4B;
+margin-right: 25px;
+}
+.app{
+    margin-top: 66px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.app_item svg{
+    margin-right: 12px;
+}
+.gray-small-text{
+   
+font-style: italic;
+font-weight: normal;
+font-size: 14px;
+line-height: 27px;
+/* identical to box height, or 193% */
+
+
+/* 02 */
+
+color: #686868;
+}
+.img_width{
+    width: 100%;
 }
