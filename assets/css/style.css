@@ -4179,6 +4179,18 @@ input.little-input {
     width: 56px;
     height: 56px;
     border-radius: 50%;
+    position: fixed;
+    right: 84px;
+    bottom: 220px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 
