@@ -4933,3 +4933,118 @@ color: #686868;
 .img_width{
     width: 100%;
 }
+
+.table-sample tr{
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.table-sample td{
+    padding-bottom: 15px;
+    position: relative;
+    vertical-align: top;
+}
+.icon_contact{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.space_ruk{
+    margin-top: 14px;
+}
+.ruk_name{
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    color: #2D2D2D;
+}
+.news-press-box:hover .ruk_name{
+    color: #007B4B;
+}
+.space_ruk p{
+    -webkit-line-clamp: 3;
+}
+.ruk-wrap{
+    padding-bottom: 0;
+}
+.rukov_name{
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 450;
+    font-size: 32px;
+    line-height: 30px;
+    /* identical to box height, or 94% */
+
+    text-align: left;
+    /* enpf green */
+
+    color: #007B4B;
+
+}
+.rukov_name_career{
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /* or 150% */
+    text-align: left;
+
+    /* 05 enpf */
+    margin-top: 14px;
+    color: #2D2D2D;
+    margin-bottom: 24px;
+}
+.content_ruk{
+    text-align: justify;
+}
+
+.modal-content{
+    max-height: 700px;
+}
+.modal-body{
+    overflow: auto;
+}
+.ruk-backhround{
+    background: url(/assets/images/ruk_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:right;
+}
+.sample_item{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.sample_item img{
+    margin-right: 20px;
+}
+.gray_block_name{
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 30px;
+/* identical to box height, or 167% */
+margin-bottom: 14px;
+
+/* 05 enpf */
+
+color: #2D2D2D;
+}
+.gray_block:hover .gray_block_name{
+    color: #007B4B;
+}
+.gray_block{
+    background: #F1F1F1;
+box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
+padding: 25px;
+height: 325px;
+margin-bottom: 30px;
+}
+.text-align-left{
+    text-align: left;
+}
+.five_td td{
+    width: 20%;
+}
