@@ -46,10 +46,10 @@ $('.burger-dropdown-close').click(function() {
 
 jQuery(function($) {
     $(document).mouseup(function(e) {
-        var div = $(".burger-dropdow");
+        var div = $(".burger-dropdown");
         if (!div.is(e.target) &&
             div.has(e.target).length === 0) {
-            $('.burger-dropdow, .burger-btn').removeClass('active');
+            $('.burger-dropdown, .burger-btn').removeClass('active');
         }
     });
 });
@@ -658,4 +658,18 @@ var swiper10 = new Swiper(".video-instruction-swiper-2", {
             slidesPerView: 1,
         },
     }
+});
+
+$('.btn_zap').click(function() {
+    $('.gray_form_block').toggleClass('active');
+});
+
+jQuery(function($) {
+    $(document).mouseup(function(e) {
+        var div = $(".gray_form_block");
+        if (!div.is(e.target) &&
+            div.has(e.target).length === 0) {
+            $('.gray_form_block').removeClass('active');
+        }
+    });
 });

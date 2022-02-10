@@ -5060,3 +5060,64 @@ margin-bottom: 30px;
 .five_td td{
     width: 20%;
 }
+.gray_form_block{
+    background: #F1F1F1;
+    border: 2px solid #F1F1F1;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-bottom: 140px;
+    display: none;
+}
+.gray_form_block-2{
+    background: #F1F1F1;
+    border: 2px solid #F1F1F1;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-bottom: 140px;
+    height: 756px;
+    overflow: auto;
+}
+.input-flex-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-flex-box .registration-form-input{
+    max-width: 45%;
+    width: 50%;
+    
+}
+.gray_form_block.active{
+    display: block;
+}
+.message{
+    margin-top: 37px;
+}
+.registration-form-input .select__head{
+    border: 1px solid #CDDED6;
+    color: #686868;
+}
+.wdthmax{
+    max-width: 100%;
+}
+.wdth{
+    max-width: 100% !important;
+   
+}
+.wdth input{
+    height: 144px;
+}
+.wdth input::placeholder{
+   vertical-align: top;
+}
+.right_poisk{
+
+}
+.ffl{
+    display: flex;
+    justify-content: space-between;
+}
+.ffl .question-n-answer-search{
+    max-width: 450px;
+    width: 100%;
+}
