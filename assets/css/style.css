@@ -5121,3 +5121,57 @@ margin-bottom: 30px;
     max-width: 450px;
     width: 100%;
 }
+
+.vak-box-name{
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: 450;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height, or 150% */
+
+
+
+/* enpf green */
+
+color: #2D2D2D;
+}
+
+.vak_info{
+    font-family: "Futura PT";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+/* or 139% */
+
+
+/* 02 */
+
+color: #686868;
+}
+.hover-green{
+    color: #2D2D2D;
+}
+.carer-box:hover .hover-green{
+    color: #007B4B;
+}
+.carer-box:hover .vak-box-name{
+    color: #007B4B;
+}
+.car_info_border{
+    border: none;
+}
+.carer-box {
+    border-bottom: 1px solid #E4E4E4;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.vak-wrap{
+    padding-bottom: 0px;
+}
+
+.vak-space-top{
+    padding-top: 0;
+}
