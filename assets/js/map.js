@@ -4,9 +4,9 @@ ymaps.ready(function () {
             zoom: 6
         }, {
             searchControlProvider: 'yandex#search'
-        }),
+        })
 
-        // Создаём макет содержимого.
+        /*// Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
@@ -19,7 +19,7 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: 'assets/images/icons/mapicon.png',
+            iconImageHref: '/local/templates/main/front/assets/images/icons/mapIcon.png',
             // Размеры метки.
             iconImageSize: [30, 35],
             // Смещение левого верхнего угла иконки относительно
@@ -35,7 +35,7 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image2',
             // Своё изображение иконки метки.
-            iconImageHref: 'assets/images/icons/mapicon.png',
+            iconImageHref: '/local/templates/main/front/assets/images/icons/mapIcon.png',
             // Размеры метки.
             iconImageSize: [30, 35],
             // Смещение левого верхнего угла иконки относительно
@@ -51,7 +51,7 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#imageWithContent',
             // Своё изображение иконки метки.
-            iconImageHref: 'assets/images/icons/mapicon.png',
+            iconImageHref: '/local/templates/main/front/assets/images/icons/mapIcon.png',
             // Размеры метки.
             iconImageSize: [30, 35],
             // Смещение левого верхнего угла иконки относительно
@@ -71,7 +71,7 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#imageWithContent2',
             // Своё изображение иконки метки.
-            iconImageHref: 'assets/images/icons/mapicon.png',
+            iconImageHref: '/local/templates/main/front/assets/images/icons/mapIcon.png',
             // Размеры метки.
             iconImageSize: [30, 35],
             // Смещение левого верхнего угла иконки относительно
@@ -85,7 +85,63 @@ ymaps.ready(function () {
 
     myMap.geoObjects
         .add(myPlacemark)
-        .add(myPlacemarkWithContent);
+        .add(myPlacemarkWithContent);*/   
+        
+    var collection = new ymaps.GeoObjectCollection();
+
+    
+    $('#map-filter-submit').click(function () {
+        elem = $("input[name='region']:checked");
+        nextElem = elem.next();
+        cityName = $.trim(nextElem.text());
+        $('#mapCityName').text(cityName);
+        setMapCityId(elem.val());
+        filterRegionalNetworks();
+    });
+
+    filterRegionalNetworks();
+
+    function filterRegionalNetworks() {
+        collection.removeAll();
+
+        cityId = $("input[name='region']:checked").val();
+        mapSearch = $('#mapSearch').val();
+    
+        $.ajax({
+            type: "POST",
+            url: "/ajax_query/map/filterRegionalNetworks.php",        
+            dataType: "json",
+            data: {
+                cityId: cityId,
+                search: mapSearch
+            },
+            success: function(data) {
+                removeBranches();
+                $.each(data, function (key, coord) {
+                    addBranch(coord);
+
+                    if (coord.PROPERTY_MAP_VALUE) {
+                        var myPlacemark = new ymaps.Placemark(coord.PROPERTY_MAP_VALUE.split(','), {
+                            hintContent: coord.NAME,
+                            balloonContent: coord.NAME
+                        }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: '/local/templates/main/front/assets/images/icons/mapIcon.png',
+                            iconImageSize: [30, 35],
+                            iconImageOffset: [-5, -38]
+                        });
+                        collection.add(myPlacemark);
+                    }
+                });
+                /*if (data.success === true) {
+                    $('.contacts-map-your_city').hide();
+                }*/
+
+                myMap.geoObjects.add(collection);
+				myMap.setBounds(collection.getBounds());
+            }
+        });
+    }
 });
 // ymaps.ready(init);
 

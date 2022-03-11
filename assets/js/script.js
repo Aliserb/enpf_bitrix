@@ -197,6 +197,27 @@ document.addEventListener('DOMContentLoaded', function() {
         click.preventDefault();
         scrollTo(0, 400);
     }
+
+    $('.contact-map-filter-close').click(function() {
+        $('.contact-map-filter-body, .contact-map-filter-heading, .contact-map-filter').toggleClass('close');
+    
+        if ($('.contact-map-filter').hasClass('close')) {
+            $('.contact-map-filter-body').hide(1000);
+        } else {
+            $('.contact-map-filter-body').show("slow");
+        }
+    });
+    
+    $('.contacts-map-right-burger').click(function() {
+        $('.contacts-map-right').toggleClass('active');
+    
+        // if ($('.contacts-map-right').hasClass('close')) {
+        //     $('.contact-map-filter-body').hide(1000);
+        // } else {
+        //     $('.contact-map-filter-body').show("slow");
+        // }
+    });
+    // map filter button on contact page
 });
 // back to top
 
@@ -238,27 +259,6 @@ function onTabClick(item) {
     });
 }
 // services tabs
-
-$('.contact-map-filter-close').click(function() {
-    $('.contact-map-filter-body, .contact-map-filter-heading, .contact-map-filter').toggleClass('close');
-
-    if ($('.contact-map-filter').hasClass('close')) {
-        $('.contact-map-filter-body').hide(1000);
-    } else {
-        $('.contact-map-filter-body').show("slow");
-    }
-});
-
-$('.contacts-map-right-burger').click(function() {
-    $('.contacts-map-right').toggleClass('active');
-
-    // if ($('.contacts-map-right').hasClass('close')) {
-    //     $('.contact-map-filter-body').hide(1000);
-    // } else {
-    //     $('.contact-map-filter-body').show("slow");
-    // }
-});
-// map filter button on contact page
 
 
 function toggle(source) {
@@ -446,8 +446,12 @@ $(document).on('click', '.answer-tab-btn', function() {
 // reg accordion
 // let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
 let accordion = document.querySelector('.information-row');
-let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item, .answer-accordion-item');
-let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title, .answer-accordion-item-title');
+if (accordion !== null) {
+    let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item, .answer-accordion-item');
+    let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title, .answer-accordion-item-title');
+
+    title.forEach(question => question.addEventListener('click', toggleAccordion));
+}
 
 function toggleAccordion() {
     let thisItem = this.parentNode;
@@ -462,8 +466,6 @@ function toggleAccordion() {
         item.classList.remove('active');
     });
 }
-
-title.forEach(question => question.addEventListener('click', toggleAccordion));
 // reg accordion
 
 // reg tabs
@@ -538,12 +540,13 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }, false);
 
-    overlay.addEventListener('click', function() {
-        document.querySelector('.modal-wrap.active').classList.remove('active');
-        this.classList.remove('active');
-    });
+    if (overlay != null) {
+        overlay.addEventListener('click', function() {
+            document.querySelector('.modal-wrap.active').classList.remove('active');
+            this.classList.remove('active');
+        });
+    }
 });
-
 
 const labels = [
     '',
@@ -587,15 +590,19 @@ const config = {
     }
 };
 
-const myChart1 = new Chart(
-    document.getElementById('line-1'),
-    config
-);
+if (document.getElementById('line-1') != null) {
+    const myChart1 = new Chart(
+        document.getElementById('line-1'),
+        config
+    );
+}
 
-const myChart2 = new Chart(
-    document.getElementById('line-modal-1'),
-    config
-);
+if (document.getElementById('line-modal-1') != null) {
+    const myChart2 = new Chart(
+        document.getElementById('line-modal-1'),
+        config
+    );
+}
 // information charts
 
 // information accordion
@@ -673,3 +680,59 @@ jQuery(function($) {
         }
     });
 });
+
+function setMapCityId(cityId) {
+    $.ajax({
+        type: "POST",
+        url: "/ajax_query/map/setMapCityId.php",        
+        dataType: "json",
+        data: {
+            cityId: cityId
+        },
+        success: function(data) {
+            if (data.success === true) {
+                $('.contacts-map-your_city').hide();
+            }
+        }
+    });
+}
+
+function changeCity() {
+    $('.contacts-map-your_city').hide();
+    $('.contact-map-filter-body').show("slow");
+}
+
+function addBranch(data) {
+    $('.map-branches-wrap').append(`<div class="map-branches">
+        <div class="map-branch">
+            <h3 class="branch-name">`+data.NAME+`</h3>
+            <div class="branch-address">`+data.ADDRESS+`</div>
+            <div class="branch-info">
+                <div class="branch-info-title"><img src="`+mapLang.SITE_TEMPLATE_PATH+`/front/assets/images/icons/branch-time.svg" alt="time"> `+mapLang.SHEDULE+`</div>
+                <div class="branch-info-content">
+                    <span>`+data.SHEDULE+`</span>
+                </div>
+            </div>
+            <div class="branch-info">
+                <div class="branch-info-title"><img src="`+mapLang.SITE_TEMPLATE_PATH+`/front/assets/images/icons/branch-user.svg" alt="user"> `+mapLang.EMPLOYEE+`</div>
+                <div class="branch-info-content">
+                    <span>`+data.PROPERTY_FIO_OTV_VALUE+`</span>
+                </div>
+            </div>
+            <div class="branch-info">
+                <div class="branch-info-title"><img src="`+mapLang.SITE_TEMPLATE_PATH+`/front/assets/images/icons/branch-phone.svg" alt="phone"> `+mapLang.CONTACTS+`</div>
+                <div class="branch-info-content">
+                    <span>`+data.PROPERTY_PHONE_VALUE+`</span>
+                </div>
+            </div>
+            <a href="#" class="branch-link">
+                `+mapLang.RESERVE+` 
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#00A97B" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>`);
+}
+
+function removeBranches() {
+    $('.map-branches-wrap').empty();
+}
