@@ -349,10 +349,12 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }, false);
 
-    overlay.addEventListener('click', function() {
-        document.querySelector('.youtube-modal.active').classList.remove('active');
-        this.classList.remove('active');
-    });
+    if (overlay != null) {
+        overlay.addEventListener('click', function() {
+            document.querySelector('.youtube-modal.active').classList.remove('active');
+            this.classList.remove('active');
+        });
+    }
 });
 // youtube modal
 
@@ -443,30 +445,32 @@ $(document).on('click', '.answer-tab-btn', function() {
 });
 // tabs
 
-// reg accordion
-// let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
-let accordion = document.querySelector('.information-row');
-if (accordion !== null) {
-    let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item, .answer-accordion-item');
-    let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title, .answer-accordion-item-title');
-
-    title.forEach(question => question.addEventListener('click', toggleAccordion));
-}
-
-function toggleAccordion() {
-    let thisItem = this.parentNode;
-
-    items.forEach(item => {
-        if (thisItem == item) {
-            // if this item is equal to the clicked item, open it.
-            thisItem.classList.toggle('active');
-            return;
+$(function () {
+    // reg accordion
+    // let accordion = document.querySelector('.reg-accordions, .left-menu .menu');
+    let accordion = document.querySelector('.information-row');
+    if (accordion !== null) {
+        let items = accordion.querySelectorAll('.reg-accordion-item, .left-menu .menu li, .information-accordion-item, .answer-accordion-item');
+        let title = accordion.querySelectorAll('.reg-accordion-title, .left-menu-dropdown-title, .information-accordion-title, .answer-accordion-item-title');
+    
+        title.forEach(question => question.addEventListener('click', toggleAccordion));
+    
+        function toggleAccordion() {
+            let thisItem = this.parentNode;
+        
+            items.forEach(item => {
+                if (thisItem == item) {
+                    // if this item is equal to the clicked item, open it.
+                    thisItem.classList.toggle('active');
+                    return;
+                }
+                // otherwise, remove the open class
+                item.classList.remove('active');
+            });
         }
-        // otherwise, remove the open class
-        item.classList.remove('active');
-    });
-}
-// reg accordion
+        // reg accordion
+    }
+});
 
 // reg tabs
 let tab = document.querySelectorAll('.registration-form-tab'),
